@@ -1,0 +1,312 @@
+.content .press-card, .content .works-card, .content .bio-card {
+  background-color: #222;
+  color: #eee;
+  padding: 20px;
+  margin: 0 auto 20px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #222;
+}
+
+.hero {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+.hero img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: color-dodge;
+}
+.hero h1 {
+  margin-bottom: 20px;
+  padding: 20px;
+  color: #eee;
+}
+.hero h1 :first-child,
+.hero h1 :nth-child(2) {
+  font-size: 3rem;
+  display: block;
+}
+.hero h1 :last-child {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 667px) {
+  .hero img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 20rem;
+    height: 20rem;
+    mix-blend-mode: color-dodge;
+    border-radius: 20px;
+  }
+  .hero h1 {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .hero {
+    display: block;
+    position: relative;
+  }
+  .hero img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 50%;
+    height: 50%;
+    mix-blend-mode: color-dodge;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .hero h1 {
+    margin-bottom: 0;
+    padding: 20px;
+    text-align: start;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, -50%);
+    z-index: 2;
+  }
+  .hero h1 :first-child,
+  .hero h1 :nth-child(2) {
+    font-size: 2.5rem;
+    display: block;
+  }
+  .hero h1 :last-child {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 1024px) {
+  .hero {
+    width: 100%;
+    height: 100vh;
+    display: block;
+  }
+  .hero img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 50%;
+    height: 100%;
+    mix-blend-mode: color-dodge;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .hero h1 {
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, -50%);
+    z-index: 2;
+  }
+  .hero h1 :first-child,
+  .hero h1 :nth-child(2) {
+    font-size: 2.5rem;
+  }
+}
+.content .bio-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.content .bio-card .card-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.content .bio-card .card-title h3 {
+  padding: 20px 0;
+  font-size: 1.9rem;
+  position: relative;
+}
+.content .bio-card .card-title h3::after {
+  content: "";
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #eee, #222);
+}
+.content .bio-card .card-title h2 {
+  font-size: 5rem;
+}
+.content .bio-card .card-content p {
+  line-height: 1.7rem;
+  padding: 20px 0;
+}
+
+@media (min-width: 667px) {
+  .content .bio-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    box-shadow: 0 10px 20px #111;
+    border-radius: 30px;
+  }
+  .content .bio-card .card-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+  .content .bio-card .card-title h2 {
+    font-size: 7rem;
+  }
+  .content .bio-card .card-content {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .content .bio-card {
+    width: 80%;
+    transform: translate(-30px);
+  }
+}
+.content .works-card {
+  justify-content: center;
+  width: 100%;
+}
+.content .works-card .card-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.content .works-card .card-title h3 {
+  padding: 20px 0;
+  font-size: 1.9rem;
+  position: relative;
+}
+.content .works-card .card-title h3::after {
+  content: "";
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #eee, #222);
+}
+.content .works-card .card-title h2 {
+  font-size: 5rem;
+}
+.content .works-card .card-content div {
+  line-height: 1.7rem;
+  padding: 20px 0;
+}
+
+@media (min-width: 667px) {
+  .content .works-card {
+    width: 90%;
+    box-shadow: 0 10px 20px #111;
+    border-radius: 30px;
+  }
+  .content .works-card .card-title {
+    width: 100%;
+  }
+  .content .works-card .card-title h2 {
+    font-size: 7rem;
+  }
+  .content .works-card .card-content {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .content .works-card {
+    width: 80%;
+    transform: translate(30px, -70px);
+    position: relative;
+    z-index: -10;
+  }
+  .content .works-card .card-title {
+    justify-content: space-evenly;
+  }
+}
+.content .press-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.content .press-card .card-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.content .press-card .card-title h3 {
+  padding: 20px 0;
+  font-size: 1.9rem;
+  position: relative;
+}
+.content .press-card .card-title h3::after {
+  content: "";
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #eee, #222);
+}
+.content .press-card .card-title h2 {
+  font-size: 5rem;
+}
+.content .press-card .card-content p {
+  line-height: 1.7rem;
+  padding: 20px 0;
+}
+
+@media (min-width: 667px) {
+  .content .press-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    box-shadow: 0 10px 20px #111;
+    border-radius: 30px;
+  }
+  .content .press-card .card-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+  .content .press-card .card-title h2 {
+    font-size: 7rem;
+  }
+  .content .press-card .card-content {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .content .press-card {
+    width: 80%;
+    transform: translate(-30px, -120px);
+    position: relative;
+    z-index: -100;
+  }
+}/*# sourceMappingURL=main.css.map */

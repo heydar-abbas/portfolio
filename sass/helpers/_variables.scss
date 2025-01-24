@@ -1,0 +1,10 @@
+$main_color: #222;
+$alt_color: #eee;
+$shadow_color: #111;
+
+%card {
+  background-color: $main_color;
+  color: $alt_color;
+  padding: 20px;
+  margin: 0 auto 20px;
+}
