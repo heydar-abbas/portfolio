@@ -2,13 +2,13 @@
 @use "./../helpers/variables" as *;
 
 .content .press-card {
-  @include cardDisplay(column);
+  @include flexDirection(column);
   @extend %card;
   justify-content: center;
   width: 100%;
 
   .card-title {
-    @include cardDisplay(row);
+    @include flexDirection(row);
     justify-content: space-between;
     width: 100%;
 
@@ -47,13 +47,13 @@
 
 @media (min-width: 667px) {
   .content .press-card {
-    @include cardDisplay(row);
+    @include flexDirection(row);
     width: 90%;
     box-shadow: 0 10px 20px $shadow_color;
     border-radius: 30px;
   
     .card-title {
-      @include cardDisplay(column);
+      @include flexDirection(column);
       width: 50%;
   
       h2 {
