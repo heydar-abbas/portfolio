@@ -5,13 +5,16 @@
   @extend %card;
   justify-content: center;
   width: 100%;
+  overflow: hidden;
 
   .card-title {
     @include flexDirection(row);
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 20px;
 
-    h3 {
+    h2 {
+      text-transform: capitalize;
       padding: 20px 0;
       font-size: 1.9rem;
       position: relative;
@@ -27,15 +30,63 @@
       }
     }
 
-    h2 {
+    h3 {
       font-size: 5rem;
     }
   }
 
   .card-content {
-    div {
-      line-height: 1.7rem;
-      padding: 20px 0;
+    .work {
+      margin-bottom: 20px;
+      position: relative;
+      border-radius: 10px;
+
+      &:not(:first-child, :nth-child(2)) {
+        display: none;
+      }
+
+      a {
+        width: 100%;
+        text-decoration: none;
+
+        img {
+          width: 100%;
+          border-radius: 10px;
+        }
+      }
+
+      p {
+        text-transform: uppercase;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: $alt_color;
+        background-color: $main_color;
+        border-radius: 6px;
+        padding: 10px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .works-link {
+    border-radius: 30px;
+    background: linear-gradient(90deg, $main_color, $alt_color);
+    text-align: center;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0;
+      color: $alt_color;
+      text-decoration: none;
+      text-transform: capitalize;
+      font-size: 1.3rem;
+
+      span {
+        margin-left: 8px;
+      }
     }
   }
 }
@@ -49,13 +100,22 @@
     .card-title {
       width: 100%;
 
-      h2 {
+      h3 {
         font-size: 7rem;
       }
     }
 
     .card-content {
-      width: 100%;
+      @include flexDirection(row);
+      justify-content: space-around;
+
+      .work {
+        width: 17rem;
+
+        &:not(:first-child, :nth-child(2)) {
+          display: none;
+        }
+      }
     }
   }
 }
@@ -63,13 +123,53 @@
 @media (min-width: 768px) {
   .content {
     .works-card {
+      margin-bottom: 0;
       width: 80%;
-      transform: translate(30px, -70px);
-      position: relative;
-      z-index: -10;
+      transform: translate(30px, -50px);
 
       .card-title {
         justify-content: space-evenly;
+      }
+
+      .card-content {
+        .work {
+          width: 18rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .content {
+    .works-card {
+      .card-content {
+        .work {
+          width: 20rem;
+        }
+      }
+      .works-link {
+        width: 60%;
+        margin: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .content {
+    .works-card {
+      .card-content {
+        .work {
+          width: 16rem;
+
+          &:not(:first-child, :nth-child(2)) {
+            display: block;
+          }
+        }
+      }
+      .works-link {
+        width: 50%;
       }
     }
   }

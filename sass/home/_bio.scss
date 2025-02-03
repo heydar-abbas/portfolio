@@ -71,8 +71,11 @@
   .content {
 
     .bio-card {
+      margin-bottom: 0;
       width: 80%;
       transform: translate(-30px);
+      position: relative;
+      z-index: 2;
     }
   }
 }
