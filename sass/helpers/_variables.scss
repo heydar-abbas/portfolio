@@ -6,6 +6,15 @@ $blue_color: #3498db;
 %card {
   background-color: $main_color;
   color: $alt_color;
-  padding: 20px;
+  padding: 40px 20px 20px;
   margin: 0 auto 20px;
+  width: 100%;
+}
+
+%h2_design {
+  text-transform: uppercase;
+  font-size: 1.9rem;
+  position: relative;
+  margin-bottom: 20px;
+  letter-spacing: 4px;
 }
