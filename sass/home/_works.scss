@@ -14,10 +14,11 @@
     margin-bottom: 20px;
 
     h2 {
-      text-transform: capitalize;
+      text-transform: uppercase;
       padding: 20px 0;
       font-size: 1.9rem;
       position: relative;
+      width: 100%;
 
       &::after {
         content: "";
@@ -26,12 +27,12 @@
         left: 0;
         width: 100%;
         height: 5px;
-        background: linear-gradient(90deg, $alt_color, $main_color);
+        background: linear-gradient(90deg, $main_color, $alt_color);
       }
     }
 
     h3 {
-      font-size: 5rem;
+      display: none;
     }
   }
 
@@ -126,9 +127,20 @@
       margin-bottom: 0;
       width: 80%;
       transform: translate(30px, -50px);
+      position: relative;
+      z-index: 2;
 
       .card-title {
         justify-content: space-evenly;
+
+        h2 {
+          width: 50%;
+          text-align: end;
+        }
+
+        h3 {
+          display: block;
+        }
       }
 
       .card-content {

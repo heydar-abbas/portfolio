@@ -8,11 +8,12 @@
   width: 100%;
 
   .card-title {
-    @include flexDirection(row);
-    justify-content: space-between;
-    width: 100%;
+    display: none;
+  }
 
-    h3 {
+  .card-content {
+    h2 {
+      text-transform: uppercase;
       padding: 20px 0;
       font-size: 1.9rem;
       position: relative;
@@ -32,12 +33,6 @@
       }
     }
 
-    h2 {
-      font-size: 5rem;
-    }
-  }
-
-  .card-content {
     p {
       line-height: 1.7rem;
       padding: 20px 0;
@@ -53,29 +48,38 @@
     border-radius: 30px;
   
     .card-title {
-      @include flexDirection(column);
-      width: 50%;
-  
-      h2 {
-        font-size: 7rem;
-      }
+      display: none;
     }
   
     .card-content {
-      width: 50%;
+      width: 100%;
     }
   }
 }
 
 @media (min-width: 768px) {
   .content {
-
     .bio-card {
       margin-bottom: 0;
       width: 80%;
       transform: translate(-30px);
       position: relative;
-      z-index: 2;
+      z-index: 3;
+
+      .card-title {
+        @include flexDirection(row);
+        justify-content: center;
+        width: 50%;
+    
+        h3 {
+          font-size: 7rem;
+        }
+      }
+    
+      .card-content {
+        width: 50%;
+      }
+
     }
   }
 }
