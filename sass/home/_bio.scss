@@ -62,10 +62,6 @@
         @include flexDirection(row);
         justify-content: center;
         width: 50%;
-
-        h3 {
-          font-size: 14rem;
-        }
       }
 
       .card-content {

@@ -57,10 +57,6 @@
       .card-title {
         @include flexDirection(column);
         width: 50%;
-  
-        h3 {
-          font-size: 14rem;
-        }
       }
   
       .card-content {

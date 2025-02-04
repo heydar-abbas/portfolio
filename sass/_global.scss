@@ -11,6 +11,14 @@ body {
   background-color: $main_color;
 }
 
+h3 {
+  font-size: 14rem;
+  background-image: url("./../assets/images/aaron.webp");
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
+}
+
 @media (min-width: 1200px) {
   .content {
     width: 80%;

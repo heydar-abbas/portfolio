@@ -34,6 +34,15 @@ body {
   background-color: #222;
 }
 
+h3 {
+  font-size: 14rem;
+  background-image: url("./../assets/images/aaron.webp");
+  background-size: cover;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+
 @media (min-width: 1200px) {
   .content {
     width: 80%;
@@ -216,9 +225,6 @@ body {
     justify-content: center;
     width: 50%;
   }
-  .content .bio-card .card-title h3 {
-    font-size: 14rem;
-  }
   .content .bio-card .card-content {
     width: 50%;
   }
@@ -323,7 +329,6 @@ body {
   }
   .content .works-card .card-title h3 {
     display: block;
-    font-size: 14rem;
   }
   .content .works-card .card-content .work {
     width: 18rem;
@@ -393,9 +398,6 @@ body {
     flex-direction: column;
     align-items: center;
     width: 50%;
-  }
-  .content .skills-card .card-title h3 {
-    font-size: 14rem;
   }
   .content .skills-card .card-content {
     width: 50%;
