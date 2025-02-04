@@ -1,12 +1,12 @@
-.content .press-card, .content .works-card, .content .bio-card {
+.content .skills-card, .content .works-card, .content .bio-card {
   background-color: #222;
   color: #eee;
-  padding: 40px 20px 20px;
+  padding: 60px 20px 20px;
   margin: 0 auto 20px;
   width: 100%;
 }
 
-.content .press-card .card-content h2, .content .works-card .card-title h2, .content .bio-card .card-content h2 {
+.content .skills-card .card-content h2, .content .works-card .card-title h2, .content .bio-card .card-content h2 {
   text-transform: uppercase;
   font-size: 1.9rem;
   position: relative;
@@ -14,7 +14,7 @@
   letter-spacing: 4px;
 }
 
-.content .press-card .card-content h2::after, .content .works-card .card-title h2::after, .content .bio-card .card-content h2::after {
+.content .skills-card .card-content h2::after, .content .works-card .card-title h2::after, .content .bio-card .card-content h2::after {
   content: "";
   position: absolute;
   top: 50px;
@@ -180,9 +180,9 @@ body {
 .content .bio-card .card-content h2::after {
   background: linear-gradient(90deg, #eee, #222);
 }
-.content .bio-card .card-content p:last-child {
+.content .bio-card .card-content p:not(:first-of-type) {
   line-height: 1.7rem;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 @media (min-width: 667px) {
@@ -217,7 +217,7 @@ body {
     width: 50%;
   }
   .content .bio-card .card-title h3 {
-    font-size: 7rem;
+    font-size: 14rem;
   }
   .content .bio-card .card-content {
     width: 50%;
@@ -292,9 +292,6 @@ body {
     box-shadow: 0 10px 20px #111;
     border-radius: 5px;
   }
-  .content .works-card .card-title h3 {
-    font-size: 7rem;
-  }
   .content .works-card .card-content {
     display: flex;
     flex-direction: row;
@@ -312,9 +309,10 @@ body {
   .content .works-card {
     margin-bottom: 0;
     width: 80%;
-    transform: translate(30px, -50px);
+    transform: translate(30px, -95px);
     position: relative;
     z-index: 2;
+    padding: 20px;
   }
   .content .works-card .card-title {
     justify-content: space-evenly;
@@ -325,6 +323,7 @@ body {
   }
   .content .works-card .card-title h3 {
     display: block;
+    font-size: 14rem;
   }
   .content .works-card .card-content .work {
     width: 18rem;
@@ -346,63 +345,36 @@ body {
     display: block;
   }
 }
-.content .press-card {
+.content .skills-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.content .press-card .card-title {
+.content .skills-card .card-title {
   display: none;
 }
-.content .press-card .card-content {
+.content .skills-card .card-content {
   width: 100%;
 }
-.content .press-card .card-content h2::after {
+.content .skills-card .card-content p:first-child {
+  color: #3498db;
+  text-transform: capitalize;
+}
+.content .skills-card .card-content h2::after {
   background: linear-gradient(90deg, #eee, #222);
 }
-.content .press-card .card-content p {
-  line-height: 1.7rem;
-  padding: 20px 0;
-}
-.content .press-card .card-content .comment {
+.content .skills-card .card-content .skills-list {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-between;
 }
-.content .press-card .card-content .comment .thumbnail {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.content .press-card .card-content .comment .thumbnail p {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-items: start;
-  margin-left: 10px;
-}
-.content .press-card .card-content .comment .thumbnail p span:first-child {
-  color: #3498db;
-}
-.content .press-card .card-content .comment .thumbnail img {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.content .press-card .card-content .comment .chevron {
-  font-size: 3rem;
-  width: 5rem;
-  height: 4rem;
-  line-height: 65px;
-  font-weight: bold;
+.content .skills-card .card-content .skills-list ul {
+  line-height: 1.7rem;
+  padding: 20px;
 }
 
 @media (min-width: 667px) {
-  .content .press-card {
+  .content .skills-card {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -412,20 +384,20 @@ body {
   }
 }
 @media (min-width: 768px) {
-  .content .press-card {
+  .content .skills-card {
     width: 80%;
-    transform: translate(-30px, -80px);
+    transform: translate(-30px, -140px);
   }
-  .content .press-card .card-title {
+  .content .skills-card .card-title {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 50%;
   }
-  .content .press-card .card-title h3 {
-    font-size: 7rem;
+  .content .skills-card .card-title h3 {
+    font-size: 14rem;
   }
-  .content .press-card .card-content {
+  .content .skills-card .card-content {
     width: 50%;
   }
 }/*# sourceMappingURL=main.css.map */

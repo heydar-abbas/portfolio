@@ -86,12 +86,6 @@
     box-shadow: 0 10px 20px $shadow_color;
     border-radius: 5px;
 
-    .card-title {
-      h3 {
-        font-size: 7rem;
-      }
-    }
-
     .card-content {
       @include flexDirection(row);
       justify-content: space-around;
@@ -112,9 +106,10 @@
     .works-card {
       margin-bottom: 0;
       width: 80%;
-      transform: translate(30px, -50px);
+      transform: translate(30px, -95px);
       position: relative;
       z-index: 2;
+      padding: 20px;
 
       .card-title {
         justify-content: space-evenly;
@@ -126,6 +121,7 @@
 
         h3 {
           display: block;
+          font-size: 14rem;
         }
       }
 

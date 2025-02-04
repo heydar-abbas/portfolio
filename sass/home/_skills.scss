@@ -1,7 +1,7 @@
 @use "./../helpers/mixins" as *;
 @use "./../helpers/variables" as *;
 
-.content .press-card {
+.content .skills-card {
   @extend %card;
   @include flexDirection(column);
   justify-content: center;
@@ -13,6 +13,11 @@
   .card-content {
     width: 100%;
 
+    p:first-child {
+      color: $blue_color;
+      text-transform: capitalize;
+    }
+
     h2 {
       @extend %h2_design;
 
@@ -22,49 +27,20 @@
       }
     }
 
-    p {
-      line-height: 1.7rem;
-      padding: 20px 0;
-    }
-
-    .comment {
-      @include flexDirection(row);
+    .skills-list {
+      display: flex;
       justify-content: space-between;
 
-      .thumbnail {
-        @include flexDirection(row);
-
-        p {
-          @include flexDirection(column);
-          align-items: start;
-          margin-left: 10px;
-
-          span:first-child {
-            color: $blue_color;
-          }
-        }
-
-        img {
-          width: 4rem;
-          height: 4rem;
-          border-radius: 50%;
-          object-fit: cover;
-        }
-      }
-
-      .chevron {
-        font-size: 3rem;
-        width: 5rem;
-        height: 4rem;
-        line-height: 65px;
-        font-weight: bold;
+      ul {
+        line-height: 1.7rem;
+        padding: 20px;
       }
     }
   }
 }
 
 @media (min-width: 667px) {
-  .content .press-card {
+  .content .skills-card {
     @include flexDirection(row);
     width: 90%;
     box-shadow: 0 10px 20px $shadow_color;
@@ -74,16 +50,16 @@
 
 @media (min-width: 768px) {
   .content {
-    .press-card {
+    .skills-card {
       width: 80%;
-      transform: translate(-30px, -80px);
+      transform: translate(-30px, -140px);
 
       .card-title {
         @include flexDirection(column);
         width: 50%;
   
         h3 {
-          font-size: 7rem;
+          font-size: 14rem;
         }
       }
   

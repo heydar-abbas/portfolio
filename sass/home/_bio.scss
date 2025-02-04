@@ -25,9 +25,9 @@
       }
     }
 
-    p:last-child {
+    p:not(:first-of-type) {
       line-height: 1.7rem;
-      padding: 20px 0;
+      padding: 10px 0;
     }
   }
 }
@@ -64,7 +64,7 @@
         width: 50%;
 
         h3 {
-          font-size: 7rem;
+          font-size: 14rem;
         }
       }
 
