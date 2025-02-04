@@ -17,12 +17,7 @@
       width: 100%;
 
       &::after {
-        content: "";
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
-        height: 5px;
+        @extend %after_design;
         background: linear-gradient(90deg, $main_color, $alt_color);
       }
     }
@@ -92,8 +87,6 @@
     border-radius: 5px;
 
     .card-title {
-      width: 100%;
-
       h3 {
         font-size: 7rem;
       }
@@ -171,9 +164,6 @@
             display: block;
           }
         }
-      }
-      .works-link {
-        width: 100%;
       }
     }
   }

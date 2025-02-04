@@ -14,6 +14,15 @@
   letter-spacing: 4px;
 }
 
+.content .press-card .card-content h2::after, .content .works-card .card-title h2::after, .content .bio-card .card-content h2::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -169,12 +178,6 @@ body {
   text-transform: capitalize;
 }
 .content .bio-card .card-content h2::after {
-  content: "";
-  position: absolute;
-  top: 50px;
-  left: 0;
-  width: 100%;
-  height: 5px;
   background: linear-gradient(90deg, #eee, #222);
 }
 .content .bio-card .card-content p:last-child {
@@ -236,12 +239,6 @@ body {
   width: 100%;
 }
 .content .works-card .card-title h2::after {
-  content: "";
-  position: absolute;
-  top: 50px;
-  left: 0;
-  width: 100%;
-  height: 5px;
   background: linear-gradient(90deg, #222, #eee);
 }
 .content .works-card .card-title h3 {
@@ -294,9 +291,6 @@ body {
     width: 90%;
     box-shadow: 0 10px 20px #111;
     border-radius: 5px;
-  }
-  .content .works-card .card-title {
-    width: 100%;
   }
   .content .works-card .card-title h3 {
     font-size: 7rem;
@@ -351,9 +345,6 @@ body {
   .content .works-card .card-content .work:not(:first-child, :nth-child(2)) {
     display: block;
   }
-  .content .works-card .works-link {
-    width: 100%;
-  }
 }
 .content .press-card {
   display: flex;
@@ -368,12 +359,6 @@ body {
   width: 100%;
 }
 .content .press-card .card-content h2::after {
-  content: "";
-  position: absolute;
-  top: 50px;
-  left: 0;
-  width: 100%;
-  height: 5px;
   background: linear-gradient(90deg, #eee, #222);
 }
 .content .press-card .card-content p {
@@ -424,12 +409,6 @@ body {
     width: 90%;
     box-shadow: 0 10px 20px #111;
     border-radius: 5px;
-  }
-  .content .press-card .card-title {
-    display: none;
-  }
-  .content .press-card .card-content {
-    width: 100%;
   }
 }
 @media (min-width: 768px) {

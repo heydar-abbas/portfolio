@@ -18,3 +18,12 @@ $blue_color: #3498db;
   margin-bottom: 20px;
   letter-spacing: 4px;
 }
+
+%after_design {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+}

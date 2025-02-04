@@ -20,12 +20,7 @@
       @extend %h2_design;
 
       &::after {
-        content: "";
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
-        height: 5px;
+        @extend %after_design;
         background: linear-gradient(90deg, $alt_color, $main_color);
       }
     }
