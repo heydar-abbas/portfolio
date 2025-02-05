@@ -79,21 +79,55 @@ h3 {
   mix-blend-mode: color-dodge;
 }
 .hero h1 {
-  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
   padding: 20px;
   color: #eee;
 }
-.hero h1 :first-child,
-.hero h1 :nth-child(2) {
+.hero h1 span:first-of-type,
+.hero h1 span:nth-child(2) {
   font-size: 3rem;
   display: block;
 }
-.hero h1 :last-child {
+.hero h1 .textwriter {
+  flex-basis: fit-content;
   font-size: 1.2rem;
   color: #3498db;
   text-transform: uppercase;
+  position: relative;
+}
+.hero h1 .textwriter::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #222;
+  border-left: 2px solid;
+  animation: 8s steps(26) 1s forwards typing, 1s step-end infinite blink;
 }
 
+@keyframes typing {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 0;
+  }
+  75% {
+    width: 56%;
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
 @media (min-width: 667px) {
   .hero {
     margin-bottom: 0;
@@ -107,7 +141,7 @@ h3 {
     border-radius: 20px;
   }
   .hero h1 {
-    text-align: center;
+    justify-content: center;
   }
 }
 @media (min-width: 768px) {
@@ -125,9 +159,7 @@ h3 {
     border-radius: 0;
   }
   .hero h1 {
-    margin-bottom: 0;
-    padding: 20px;
-    text-align: start;
+    justify-content: start;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -139,7 +171,7 @@ h3 {
     font-size: 2.5rem;
     display: block;
   }
-  .hero h1 :last-child {
+  .hero h1 .textwriter {
     font-size: 1.4rem;
   }
 }
@@ -159,7 +191,6 @@ h3 {
     border-radius: 0;
   }
   .hero h1 {
-    margin-bottom: 0;
     padding: 0;
     text-align: start;
     position: absolute;
@@ -176,7 +207,6 @@ h3 {
 .content .bio-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 .content .bio-card .card-title {
@@ -198,7 +228,6 @@ h3 {
   .content .bio-card {
     display: flex;
     flex-direction: row;
-    align-items: center;
     width: 90%;
     box-shadow: 0 10px 20px #111;
     border-radius: 5px;
@@ -221,8 +250,8 @@ h3 {
   .content .bio-card .card-title {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     width: 50%;
   }
   .content .bio-card .card-content {
@@ -235,11 +264,16 @@ h3 {
 }
 .content .works-card .card-title {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
   margin-bottom: 20px;
+}
+.content .works-card .card-title > div {
+  width: 100%;
+  text-align: end;
+}
+.content .works-card .card-title > div > p {
+  color: #3498db;
+  text-transform: capitalize;
+  align-self: end;
 }
 .content .works-card .card-title h2 {
   width: 100%;
@@ -301,7 +335,6 @@ h3 {
   .content .works-card .card-content {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-around;
   }
   .content .works-card .card-content .work {
@@ -321,14 +354,23 @@ h3 {
     padding: 20px;
   }
   .content .works-card .card-title {
-    justify-content: space-evenly;
+    margin-bottom: 0;
+  }
+  .content .works-card .card-title > div {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
   .content .works-card .card-title h2 {
-    width: 50%;
     text-align: end;
+    margin-bottom: 0;
   }
   .content .works-card .card-title h3 {
-    display: block;
+    display: flex;
+    width: 50%;
+    justify-content: center;
   }
   .content .works-card .card-content .work {
     width: 18rem;
@@ -353,7 +395,6 @@ h3 {
 .content .skills-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 .content .skills-card .card-title {
@@ -382,7 +423,6 @@ h3 {
   .content .skills-card {
     display: flex;
     flex-direction: row;
-    align-items: center;
     width: 90%;
     box-shadow: 0 10px 20px #111;
     border-radius: 5px;

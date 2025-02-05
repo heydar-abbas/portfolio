@@ -3,5 +3,4 @@
 @mixin flexDirection($dir) {
   display: flex;
   flex-direction: $dir;
-  align-items: center;
 }

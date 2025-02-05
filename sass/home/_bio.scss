@@ -61,6 +61,7 @@
       .card-title {
         @include flexDirection(row);
         justify-content: center;
+        align-items: center;
         width: 50%;
       }
 
