@@ -2,11 +2,13 @@
 @use "./../helpers/variables" as *;
 
 .content .works-card {
+  font-family: "Noto Sans Mono", serif;
   @extend %card;
   justify-content: center;
   overflow: hidden;
 
   .card-title {
+    font-family: "Noto Serif", serif;
     display: flex;
     margin-bottom: 20px;
 
@@ -72,19 +74,22 @@
   }
 
   .works-link {
-    a {
-      display: flex;
-      justify-content: end;
-      align-items: center;
-      padding: 10px 0;
-      color: $blue_color;
-      text-decoration: none;
-      text-transform: capitalize;
-      font-size: 1.3rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 10px 0;
+    color: $blue_color;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    border-radius: 50px;
 
-      span {
-        margin-left: 8px;
-      }
+    span {
+      margin-left: 8px;
+    }
+
+    &:hover {
+      color: rgba($blue_color, .8);
     }
   }
 }
@@ -115,7 +120,7 @@
     .works-card {
       margin-bottom: 0;
       width: 80%;
-      transform: translate(30px, -95px);
+      transform: translate(30px, -110px);
       position: relative;
       z-index: 2;
       padding: 20px;

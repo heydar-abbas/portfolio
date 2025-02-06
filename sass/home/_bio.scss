@@ -2,6 +2,7 @@
 @use "./../helpers/variables" as *;
 
 .content .bio-card {
+  font-family: "Noto Serif", serif;
   @extend %card;
   @include flexDirection(column);
   justify-content: center;
@@ -14,6 +15,7 @@
     p:first-child {
       color: $blue_color;
       text-transform: capitalize;
+      padding: 0;
     }
 
     h2 {
@@ -26,6 +28,7 @@
     }
 
     p:not(:first-of-type) {
+      font-family: "Noto Sans Mono", serif;
       line-height: 1.7rem;
       padding: 10px 0;
     }

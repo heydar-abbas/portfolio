@@ -2,6 +2,7 @@
 @use "./../helpers/variables" as *;
 
 .content .skills-card {
+  font-family: "Noto Serif", serif;
   @extend %card;
   @include flexDirection(column);
   justify-content: center;
@@ -28,12 +29,13 @@
     }
 
     .skills-list {
+      font-family: "Noto Sans Mono", serif;
       display: flex;
-      justify-content: space-between;
 
       ul {
         line-height: 1.7rem;
         padding: 20px;
+        flex-basis: 50%;
       }
     }
   }
@@ -52,10 +54,11 @@
   .content {
     .skills-card {
       width: 80%;
-      transform: translate(-30px, -140px);
+      transform: translate(-30px, -150px);
 
       .card-title {
         @include flexDirection(column);
+        justify-content: center;
         align-items: center;
         width: 50%;
       }

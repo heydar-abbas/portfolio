@@ -30,7 +30,6 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
   background-color: #222;
 }
 
@@ -79,6 +78,8 @@ h3 {
   mix-blend-mode: color-dodge;
 }
 .hero h1 {
+  font-family: "Noto Serif", serif;
+  font-size: 2.8rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
@@ -87,10 +88,10 @@ h3 {
 }
 .hero h1 span:first-of-type,
 .hero h1 span:nth-child(2) {
-  font-size: 3rem;
   display: block;
 }
 .hero h1 .textwriter {
+  font-family: "Noto Sans Mono", serif;
   flex-basis: fit-content;
   font-size: 1.2rem;
   color: #3498db;
@@ -138,7 +139,6 @@ h3 {
     width: 20rem;
     height: 20rem;
     mix-blend-mode: color-dodge;
-    border-radius: 10px;
   }
   .hero h1 {
     justify-content: center;
@@ -205,6 +205,7 @@ h3 {
   }
 }
 .content .bio-card {
+  font-family: "Noto Serif", serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -215,11 +216,13 @@ h3 {
 .content .bio-card .card-content p:first-child {
   color: #3498db;
   text-transform: capitalize;
+  padding: 0;
 }
 .content .bio-card .card-content h2::after {
   background: linear-gradient(90deg, #eee, #222);
 }
 .content .bio-card .card-content p:not(:first-of-type) {
+  font-family: "Noto Sans Mono", serif;
   line-height: 1.7rem;
   padding: 10px 0;
 }
@@ -259,10 +262,12 @@ h3 {
   }
 }
 .content .works-card {
+  font-family: "Noto Sans Mono", serif;
   justify-content: center;
   overflow: hidden;
 }
 .content .works-card .card-title {
+  font-family: "Noto Serif", serif;
   display: flex;
   margin-bottom: 20px;
 }
@@ -312,7 +317,7 @@ h3 {
   font-weight: bold;
   font-size: 0.8rem;
 }
-.content .works-card .works-link a {
+.content .works-card .works-link {
   display: flex;
   justify-content: end;
   align-items: center;
@@ -321,9 +326,13 @@ h3 {
   text-decoration: none;
   text-transform: capitalize;
   font-size: 1.3rem;
+  border-radius: 50px;
 }
-.content .works-card .works-link a span {
+.content .works-card .works-link span {
   margin-left: 8px;
+}
+.content .works-card .works-link:hover {
+  color: rgba(52, 152, 219, 0.8);
 }
 
 @media (min-width: 667px) {
@@ -348,7 +357,7 @@ h3 {
   .content .works-card {
     margin-bottom: 0;
     width: 80%;
-    transform: translate(30px, -95px);
+    transform: translate(30px, -110px);
     position: relative;
     z-index: 2;
     padding: 20px;
@@ -393,6 +402,7 @@ h3 {
   }
 }
 .content .skills-card {
+  font-family: "Noto Serif", serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -411,12 +421,13 @@ h3 {
   background: linear-gradient(90deg, #eee, #222);
 }
 .content .skills-card .card-content .skills-list {
+  font-family: "Noto Sans Mono", serif;
   display: flex;
-  justify-content: space-between;
 }
 .content .skills-card .card-content .skills-list ul {
   line-height: 1.7rem;
   padding: 20px;
+  flex-basis: 50%;
 }
 
 @media (min-width: 667px) {
@@ -431,11 +442,12 @@ h3 {
 @media (min-width: 768px) {
   .content .skills-card {
     width: 80%;
-    transform: translate(-30px, -140px);
+    transform: translate(-30px, -150px);
   }
   .content .skills-card .card-title {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 50%;
   }
