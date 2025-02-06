@@ -65,40 +65,29 @@ h3 {
 .hero {
   background-color: transparent;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  flex-direction: column-reverse;
-  margin-bottom: 30px;
 }
-.hero img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-  mix-blend-mode: color-dodge;
-}
-.hero h1 {
-  font-family: "Noto Serif", serif;
-  font-size: 2.8rem;
+.hero .hero-title {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
-  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px 0;
+}
+.hero .hero-title h1 {
+  font-family: "Noto Serif", serif;
+  font-size: 2.3rem;
   color: #eee;
+  text-align: center;
 }
-.hero h1 span:first-of-type,
-.hero h1 span:nth-child(2) {
-  display: block;
-}
-.hero h1 .textwriter {
+.hero .hero-title .textwriter {
   font-family: "Noto Sans Mono", serif;
-  flex-basis: fit-content;
   font-size: 1.2rem;
   color: #3498db;
   text-transform: uppercase;
   position: relative;
 }
-.hero h1 .textwriter::after {
+.hero .hero-title .textwriter::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -108,6 +97,13 @@ h3 {
   background-color: #222;
   border-left: 2px solid;
   animation: 8s steps(26) 1s forwards typing, 1s step-end infinite blink;
+}
+.hero img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: color-dodge;
 }
 
 @keyframes typing {
@@ -134,74 +130,67 @@ h3 {
     margin-bottom: 0;
   }
   .hero img {
-    -o-object-fit: cover;
-       object-fit: cover;
     width: 20rem;
     height: 20rem;
-    mix-blend-mode: color-dodge;
-  }
-  .hero h1 {
-    justify-content: center;
   }
 }
 @media (min-width: 768px) {
   .hero {
-    display: block;
+    flex-direction: row;
     position: relative;
   }
+  .hero .hero-title {
+    position: absolute;
+    left: 315px;
+    width: 31rem;
+    padding: 0;
+  }
+  .hero .hero-title h1 {
+    font-size: 2.8rem;
+  }
+  .hero .hero-title .textwriter {
+    font-size: 1.4rem;
+  }
   .hero img {
-    -o-object-fit: cover;
-       object-fit: cover;
     width: 50%;
     height: 50%;
-    mix-blend-mode: color-dodge;
-    box-shadow: none;
-    border-radius: 0;
-  }
-  .hero h1 {
-    justify-content: start;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-10%, -50%);
-    z-index: 2;
-  }
-  .hero h1 :first-child,
-  .hero h1 :nth-child(2) {
-    font-size: 2.5rem;
-    display: block;
-  }
-  .hero h1 .textwriter {
-    font-size: 1.4rem;
   }
 }
 @media (min-width: 1024px) {
   .hero {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    display: block;
+  }
+  .hero .hero-title {
+    left: 352px;
+    width: 42rem;
   }
   .hero img {
-    -o-object-fit: cover;
-       object-fit: cover;
     width: 50%;
     height: 100%;
-    mix-blend-mode: color-dodge;
-    box-shadow: none;
-    border-radius: 0;
   }
-  .hero h1 {
-    padding: 0;
-    text-align: start;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-10%, -50%);
-    z-index: 2;
+}
+@media (min-width: 1080px) {
+  .hero .hero-title {
+    left: 400px;
   }
-  .hero h1 :first-child,
-  .hero h1 :nth-child(2) {
-    font-size: 2.5rem;
+}
+@media (min-width: 1200px) {
+  .hero .hero-title {
+    left: 510px;
+    width: 40rem;
+  }
+  .hero .hero-title h1 {
+    width: 100%;
+    font-size: 3rem;
+  }
+  .hero .hero-title .textwriter {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 1300px) {
+  .hero .hero-title {
+    width: 50rem;
   }
 }
 .content .bio-card {
