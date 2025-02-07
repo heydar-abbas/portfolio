@@ -4,23 +4,120 @@
 .hero {
   background-color: transparent;
   @include flexDirection(column);
-  align-items: center;
+
+  nav {
+    width: 100%;
+
+    .container {
+      @include flexDirection(row);
+      justify-content: space-between;
+      width: 100%;
+      color: $alt_color;
+      position: relative;
+
+      .logo {
+        padding: 20px;
+
+        a {
+          font-family: $header_font;
+          font-size: 1.4rem;
+          font-weight: bold;
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+
+      .hamburger {
+        padding: 20px;
+        line-height: 0px;
+        cursor: pointer;
+
+        .mdi--hamburger-menu {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      .hide-hamburger {
+        display: none;
+      }
+
+      .close-menu {
+        padding: 20px;
+        line-height: 0px;
+        cursor: pointer;
+
+        .mdi--window-close {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      .hide-close-menu {
+        display: none;
+      }
+
+      .nav-list {
+        width: 89%;
+        position: absolute;
+        top: 60px;
+        left: 18px;
+        background-color: #eee;
+        padding: 20px;
+        border-radius: 5px;
+        z-index: 2;
+        transform: rotateX(90deg);
+        transform-origin: top;
+        transition-duration: 0.5s;
+
+        ul {
+          @include flexDirection(column);
+          width: 100%;
+
+          li {
+            list-style: none;
+            width: 100%;
+            padding: 8px 0;
+            text-align: center;
+            color: $main_color;
+            border-radius: 5px;
+
+            &:hover {
+              background-color: $main_color;
+              color: $alt_color;
+            }
+
+            a {
+              font-family: $content_font;
+              text-decoration: none;
+              color: inherit;
+              font-weight: bold;
+              font-size: 1.3rem;
+              display: block;
+            }
+          }
+        }
+      }
+
+      .open {
+        transform: rotateX(0);
+      }
+    }
+  }
 
   .hero-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexDirection(column);
     padding: 20px 20px 0;
 
     h1 {
-      font-family: "Noto Serif", serif;
+      font-family: $header_font;
       font-size: 2.3rem;
       color: $alt_color;
       text-align: center;
     }
 
     .textwriter {
-      font-family: "Noto Sans Mono", serif;
+      font-family: $content_font;
       font-size: 1.2rem;
       color: $blue_color;
       text-transform: uppercase;
@@ -73,6 +170,15 @@
   .hero {
     margin-bottom: 0;
 
+    nav {
+      .container {
+        .nav-list {
+          width: 93%;
+          left: 20px;
+        }
+      }
+    }
+
     img {
       width: 20rem;
       height: 20rem;
@@ -82,14 +188,38 @@
 
 @media (min-width: 768px) {
   .hero {
-    flex-direction: row;
+    display: block;
     position: relative;
+
+    nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+      .container {
+        width: 80%;
+        margin: 0 auto;
+
+        .logo {
+          a {
+            font-size: 1.8rem;
+          }
+        }
+
+        .nav-list {
+          width: 93%;
+        }
+      }
+    }
 
     .hero-title {
       position: absolute;
-      left: 315px;
-      width: 31rem;
+      left: 50%;
+      width: 30rem;
       padding: 0;
+      top: 50%;
+      transform: translate(-20%, -50%);
 
       h1 {
         font-size: 2.8rem;
@@ -112,8 +242,49 @@
     width: 100vw;
     height: 100vh;
 
+    nav {
+      .container {
+        padding: 20px 0;
+
+        .logo {
+          width: 20rem;
+        }
+
+        .hamburger {
+          display: none;
+        }
+
+        .close-menu {
+          display: none;
+        }
+
+        .nav-list {
+          transform: rotateX(0);
+          position: initial;
+          padding: 20px;
+          background-color: transparent;
+
+          ul {
+            flex-direction: row;
+            justify-content: space-around;
+
+            li {
+              color: inherit;
+              padding: 0;
+              transition-duration: 0.3s;
+              width: initial;
+
+              &:hover {
+                color: $blue_color;
+              }
+            }
+          }
+        }
+      }
+    }
+
     .hero-title {
-      left: 352px;
+      left: 485px;
       width: 42rem;
     }
 
@@ -127,7 +298,7 @@
 @media (min-width: 1080px) {
   .hero {
     .hero-title {
-      left: 400px;
+      left: 520px;
     }
   }
 }
@@ -135,7 +306,7 @@
 @media (min-width: 1200px) {
   .hero {
     .hero-title {
-      left: 510px;
+      left: 620px;
       width: 40rem;
 
       h1 {
@@ -153,6 +324,7 @@
 @media (min-width: 1300px) {
   .hero {
     .hero-title {
+      left: 680px;
       width: 50rem;
     }
   }

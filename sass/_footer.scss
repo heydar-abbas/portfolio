@@ -1,0 +1,43 @@
+@use "./helpers/mixins" as *;
+@use "./helpers/variables" as *;
+
+footer {
+  @include flexDirection(column);
+  font-family: "Noto Sans Mono", serif;
+  padding: 20px;
+  color: $alt_color;
+  box-shadow: 0 5px 20px #111;
+
+  p {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .mdi--copyright {
+      margin-right: 5px;
+      width: 24px;
+      height: 24px;
+    }
+
+    &:last-child a {
+      margin: 0 20px;
+      color: $alt_color;
+
+      .mdi--github,
+      .mdi--twitter {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+
+}
+
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

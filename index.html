@@ -13,18 +13,38 @@
     />
     <!-- Main Style -->
     <link rel="stylesheet" href="sass/main.css" />
+    <!-- Javascript -->
+    <script src="./js/main.js" defer></script>
   </head>
   <body>
-    <!-- Hero -->
     <header class="hero">
+      <nav>
+        <div class="container">
+          <div class="logo"><a href="#">Heydar Abbas</a></div>
+          <div class="hamburger">
+            <span class="mdi--hamburger-menu"></span>
+          </div>
+          <div class="close-menu">
+            <span class="mdi--window-close"></span>
+          </div>
+          <div class="nav-list">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact me</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
       <div class="hero-title">
         <h1>Hello, my name is Heydar Abbas</h1>
         <p class="textwriter">I'm fullstack web developer</p>
       </div>
       <img src="./assets/images/hero.webp" alt="hero image" />
     </header>
-    <!-- Content -->
-    <div class="content">
+
+    <main class="content">
       <!-- Biography -->
       <div class="bio-card">
         <div class="card-title">
@@ -92,10 +112,12 @@
           </div>
         </div>
 
-        <a href="#" class="works-link">
-          View all
-          <span class="mdi--arrow-right"></span>
-        </a>
+        <div class="works-link">
+          <a href="#">
+            View all
+            <span class="mdi--arrow-right"></span>
+          </a>
+        </div>
       </div>
       <!-- The Skills -->
       <div class="skills-card">
@@ -128,6 +150,14 @@
           </div>
         </div>
       </div>
-    </div>
+    </main>
+
+    <footer>
+      <p><span class="mdi--copyright"></span> 2025 - Heydar Abbas</p>
+      <p>
+        <a href="#"><span class="mdi--github"></span></a>
+        <a href="#"><span class="mdi--twitter"></span></a>
+      </p>
+    </footer>
   </body>
 </html>
