@@ -32,7 +32,7 @@
         line-height: 0px;
         cursor: pointer;
 
-        .mdi--hamburger-menu {
+        .hamburger-icon {
           width: 30px;
           height: 30px;
         }
@@ -47,13 +47,13 @@
         line-height: 0px;
         cursor: pointer;
 
-        .mdi--window-close {
+        .close-icon {
           width: 30px;
           height: 30px;
         }
       }
 
-      .hide-close-menu {
+      .hide-close-btn {
         display: none;
       }
 
@@ -99,7 +99,7 @@
         }
       }
 
-      .open {
+      .open-menu {
         transform: rotateX(0);
       }
     }

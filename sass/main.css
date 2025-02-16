@@ -189,7 +189,7 @@ footer p:last-child a .mdi--twitter {
   line-height: 0px;
   cursor: pointer;
 }
-.hero nav .container .hamburger .mdi--hamburger-menu {
+.hero nav .container .hamburger .hamburger-icon {
   width: 30px;
   height: 30px;
 }
@@ -201,11 +201,11 @@ footer p:last-child a .mdi--twitter {
   line-height: 0px;
   cursor: pointer;
 }
-.hero nav .container .close-menu .mdi--window-close {
+.hero nav .container .close-menu .close-icon {
   width: 30px;
   height: 30px;
 }
-.hero nav .container .hide-close-menu {
+.hero nav .container .hide-close-btn {
   display: none;
 }
 .hero nav .container .nav-list {
@@ -247,7 +247,7 @@ footer p:last-child a .mdi--twitter {
   font-size: 1.3rem;
   display: block;
 }
-.hero nav .container .open {
+.hero nav .container .open-menu {
   transform: rotateX(0);
 }
 .hero .hero-title {
@@ -560,7 +560,7 @@ footer p:last-child a .mdi--twitter {
   text-decoration: none;
   font-size: 1.3rem;
 }
-.content .works-card .works-link a .mdi--arrow-right {
+.content .works-card .works-link a .arrow-right {
   margin-left: 8px;
   width: 30px;
   height: 30px;
