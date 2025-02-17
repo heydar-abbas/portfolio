@@ -14,6 +14,7 @@
 
       .logo {
         padding: 20px;
+        flex-basis: 14rem;
 
         a {
           font-family: $header_font;
@@ -70,7 +71,7 @@
               text-decoration: none;
               color: inherit;
               font-weight: bold;
-              font-size: 1.3rem;
+              font-size: 1.2rem;
               display: block;
             }
           }
@@ -79,6 +80,94 @@
 
       .open-menu {
         transform: rotateX(0);
+      }
+    }
+  }
+}
+
+@media (min-width: 667px) {
+  .hero {
+    nav {
+      .container {
+        .nav-list {
+          width: 93%;
+          left: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+      .container {
+        width: 90%;
+        margin: 0 auto;
+
+        .logo {
+          flex-basis: 16rem;
+
+          a {
+            font-size: 1.8rem;
+          }
+        }
+
+        .nav-list {
+          width: 93%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    nav {
+      .container {
+        padding: 20px 0;
+
+        .logo {
+          flex-basis: 20rem;
+        }
+
+        .nav-list {
+          transform: rotateX(0);
+          position: initial;
+          background-color: transparent;
+          flex-basis: 32rem;
+
+          ul {
+            flex-direction: row;
+            justify-content: space-around;
+
+            li {
+              color: inherit;
+              padding: 0;
+              transition-duration: 0.3s;
+              width: initial;
+
+              &:hover {
+                color: $blue_color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    nav {
+      .container {
+        width: 80%;
       }
     }
   }

@@ -70,15 +70,6 @@
   .hero {
     margin-bottom: 0;
 
-    nav {
-      .container {
-        .nav-list {
-          width: 93%;
-          left: 20px;
-        }
-      }
-    }
-
     img {
       width: 20rem;
       height: 20rem;
@@ -90,28 +81,6 @@
   .hero {
     display: block;
     position: relative;
-
-    nav {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-
-      .container {
-        width: 80%;
-        margin: 0 auto;
-
-        .logo {
-          a {
-            font-size: 1.8rem;
-          }
-        }
-
-        .nav-list {
-          width: 93%;
-        }
-      }
-    }
 
     .hero-title {
       position: absolute;
@@ -142,45 +111,8 @@
     width: 100vw;
     height: 100vh;
 
-    nav {
-      .container {
-        padding: 20px 0;
-
-        .logo {
-          width: 20rem;
-        }
-
-        .hamburger {
-          display: none;
-        }
-
-        .close-menu {
-          display: none;
-        }
-
-        .nav-list {
-          transform: rotateX(0);
-          position: initial;
-          padding: 20px;
-          background-color: transparent;
-
-          ul {
-            flex-direction: row;
-            justify-content: space-around;
-
-            li {
-              color: inherit;
-              padding: 0;
-              transition-duration: 0.3s;
-              width: initial;
-
-              &:hover {
-                color: $blue_color;
-              }
-            }
-          }
-        }
-      }
+    nav .container .toggle-menu {
+      display: none;
     }
 
     .hero-title {

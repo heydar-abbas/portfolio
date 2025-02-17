@@ -223,10 +223,6 @@ footer p:last-child a .mdi--twitter {
   .hero {
     margin-bottom: 0;
   }
-  .hero nav .container .nav-list {
-    width: 93%;
-    left: 20px;
-  }
   .hero img {
     width: 20rem;
     height: 20rem;
@@ -236,22 +232,6 @@ footer p:last-child a .mdi--twitter {
   .hero {
     display: block;
     position: relative;
-  }
-  .hero nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-  .hero nav .container {
-    width: 80%;
-    margin: 0 auto;
-  }
-  .hero nav .container .logo a {
-    font-size: 1.8rem;
-  }
-  .hero nav .container .nav-list {
-    width: 93%;
   }
   .hero .hero-title {
     position: absolute;
@@ -277,36 +257,8 @@ footer p:last-child a .mdi--twitter {
     width: 100vw;
     height: 100vh;
   }
-  .hero nav .container {
-    padding: 20px 0;
-  }
-  .hero nav .container .logo {
-    width: 20rem;
-  }
-  .hero nav .container .hamburger {
+  .hero nav .container .toggle-menu {
     display: none;
-  }
-  .hero nav .container .close-menu {
-    display: none;
-  }
-  .hero nav .container .nav-list {
-    transform: rotateX(0);
-    position: initial;
-    padding: 20px;
-    background-color: transparent;
-  }
-  .hero nav .container .nav-list ul {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  .hero nav .container .nav-list ul li {
-    color: inherit;
-    padding: 0;
-    transition-duration: 0.3s;
-    width: initial;
-  }
-  .hero nav .container .nav-list ul li:hover {
-    color: #3498db;
   }
   .hero .hero-title {
     left: 485px;
@@ -355,6 +307,7 @@ footer p:last-child a .mdi--twitter {
 }
 .hero nav .container .logo {
   padding: 20px;
+  flex-basis: 14rem;
 }
 .hero nav .container .logo a {
   font-family: "Noto Serif", serif;
@@ -408,13 +361,72 @@ footer p:last-child a .mdi--twitter {
   text-decoration: none;
   color: inherit;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   display: block;
 }
 .hero nav .container .open-menu {
   transform: rotateX(0);
 }
 
+@media (min-width: 667px) {
+  .hero nav .container .nav-list {
+    width: 93%;
+    left: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .hero nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .hero nav .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .hero nav .container .logo {
+    flex-basis: 16rem;
+  }
+  .hero nav .container .logo a {
+    font-size: 1.8rem;
+  }
+  .hero nav .container .nav-list {
+    width: 93%;
+  }
+}
+@media (min-width: 1024px) {
+  .hero nav .container {
+    padding: 20px 0;
+  }
+  .hero nav .container .logo {
+    flex-basis: 20rem;
+  }
+  .hero nav .container .nav-list {
+    transform: rotateX(0);
+    position: initial;
+    background-color: transparent;
+    flex-basis: 32rem;
+  }
+  .hero nav .container .nav-list ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .hero nav .container .nav-list ul li {
+    color: inherit;
+    padding: 0;
+    transition-duration: 0.3s;
+    width: initial;
+  }
+  .hero nav .container .nav-list ul li:hover {
+    color: #3498db;
+  }
+}
+@media (min-width: 1200px) {
+  .hero nav .container {
+    width: 80%;
+  }
+}
 .content .bio-card {
   font-family: "Noto Serif", serif;
   display: flex;
