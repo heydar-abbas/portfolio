@@ -1,15 +1,13 @@
-const hamburger = document.querySelector(".hamburger");
-const close_menu = document.querySelector(".close-menu");
+const toggle_menu = document.querySelector(".toggle-menu");
+const icon = document.querySelector(".mdi--hamburger-menu");
 const nav_list = document.querySelector(".nav-list");
 
-hamburger.onclick = function() {
-  this.classList.add("hide-hamburger");
-  close_menu.classList.remove("hide-close-btn");
-  nav_list.classList.add("open-menu");
-};
-
-close_menu.onclick = function() {
-  this.classList.add("hide-close-btn");
-  hamburger.classList.remove("hide-hamburger");
-  nav_list.classList.remove("open-menu");
-};
+toggle_menu.addEventListener("click", function () {
+  if (icon.classList.contains("mdi--hamburger-menu")) {
+    icon.classList.replace("mdi--hamburger-menu", "mdi--window-close");
+    nav_list.classList.add("open-menu");
+  } else {
+    icon.classList.replace("mdi--window-close", "mdi--hamburger-menu");
+    nav_list.classList.remove("open-menu");
+  }
+});
