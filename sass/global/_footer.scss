@@ -18,22 +18,23 @@ footer {
       margin-right: 5px;
       width: 24px;
       height: 24px;
-      color: $blue_color;
-    }
-
-    &:last-child a {
-      margin: 0 20px;
-      color: $alt_color;
-
-      .mdi--github,
-      .mdi--twitter {
-        width: 30px;
-        height: 30px;
-      }
     }
   }
 
-
+  .footer-social {
+    color: $alt_color;
+    padding: 10px;
+    
+    a {
+      padding: 10px;
+      color: $alt_color;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) {

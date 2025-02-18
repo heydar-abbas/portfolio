@@ -14,11 +14,12 @@ header {
 
       .logo {
         padding: 20px;
-        flex-basis: 14rem;
+        flex-basis: 8rem;
+        text-align: center;
 
         a {
-          font-family: $header_font;
-          font-size: 1.4rem;
+          font-family: $logo_font;
+          font-size: 3rem;
           font-weight: bold;
           text-decoration: none;
           color: inherit;
@@ -31,15 +32,15 @@ header {
         cursor: pointer;
 
         .icon {
-          width: 30px;
-          height: 30px;
+          width: 36px;
+          height: 36px;
         }
       }
 
       .nav-list {
-        width: 89%;
+        width: 90%;
         position: absolute;
-        top: 60px;
+        top: 80px;
         left: 18px;
         background-color: #eee;
         padding: 20px;
@@ -61,11 +62,6 @@ header {
             color: $main_color;
             border-radius: 5px;
 
-            &:not(:last-child):hover {
-              background-color: $main_color;
-              color: $alt_color;
-            }
-
             a {
               font-family: $content_font;
               text-decoration: none;
@@ -84,8 +80,8 @@ header {
               color: inherit;
               margin: 0 20px;
 
-              .mdi--github,
-              .mdi--twitter {
+              .fa6-brands--github,
+              .fa6-brands--x-twitter {
                 width: 30px;
                 height: 30px;
               }
@@ -106,8 +102,8 @@ header {
     nav {
       .container {
         .nav-list {
-          width: 93%;
-          left: 20px;
+          width: 90%;
+          left: 36px;
         }
       }
     }
@@ -124,18 +120,20 @@ header {
 
       .container {
         width: 90%;
-        margin: 20px auto;
+        margin: 0 auto;
 
         .logo {
-          flex-basis: 16rem;
+          flex-basis: 10rem;
 
           a {
-            font-size: 1.8rem;
+            font-size: 4rem;
           }
         }
 
         .nav-list {
-          width: 93%;
+          width: 90%;
+          top: 100px;
+          left: 42px;
         }
       }
     }
@@ -146,18 +144,13 @@ header {
   header {
     nav {
       .container {
-        padding: 20px 0;
-
-        .logo {
-          flex-basis: 20rem;
-        }
-
         .nav-list {
           transform: rotateX(0);
           position: initial;
           background-color: transparent;
           flex-basis: 30rem;
           line-height: 0;
+          padding: 0;
 
           ul {
             flex-direction: row;
@@ -186,16 +179,6 @@ header {
             }
           }
         }
-      }
-    }
-  }
-}
-
-@media (min-width: 1200px) {
-  header {
-    nav {
-      .container {
-        width: 80%;
       }
     }
   }
