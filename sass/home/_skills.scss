@@ -1,9 +1,10 @@
 @use "./../helpers/mixins" as *;
 @use "./../helpers/variables" as *;
+@use "./../helpers/placeholders" as *;
 
 .content .skills-card {
-  font-family: "Noto Serif", serif;
-  @extend %card;
+  font-family: $header_font;
+  @extend %card_style;
   @include flexDirection(column);
   justify-content: center;
 
@@ -20,16 +21,16 @@
     }
 
     h2 {
-      @extend %h2_design;
+      @extend %h2_style;
 
       &::after {
-        @extend %after_design;
+        @extend %after_style;
         background: linear-gradient(90deg, $alt_color, $main_color);
       }
     }
 
     .skills-list {
-      font-family: "Noto Sans Mono", serif;
+      font-family: $content_font;
       display: flex;
 
       ul {

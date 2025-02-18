@@ -1,9 +1,10 @@
 @use "./../helpers/mixins" as *;
 @use "./../helpers/variables" as *;
+@use "./../helpers/placeholders" as *;
 
 .content .bio-card {
-  font-family: "Noto Serif", serif;
-  @extend %card;
+  font-family: $header_font;
+  @extend %card_style;
   @include flexDirection(column);
   justify-content: center;
 
@@ -19,16 +20,16 @@
     }
 
     h2 {
-      @extend %h2_design;
+      @extend %h2_style;
 
       &::after {
-        @extend %after_design;
+        @extend %after_style;
         background: linear-gradient(90deg, $alt_color, $main_color);
       }
     }
 
     p:not(:first-of-type) {
-      font-family: "Noto Sans Mono", serif;
+      font-family: $content_font;
       line-height: 1.7rem;
       padding: 10px 0;
     }

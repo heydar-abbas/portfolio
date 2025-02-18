@@ -1,13 +1,14 @@
 @use "./../helpers/mixins" as *;
 @use "./../helpers/variables" as *;
+@use "./../helpers/placeholders" as *;
 
 .content .works-card {
-  font-family: "Noto Sans Mono", serif;
-  @extend %card;
+  font-family: $content_font;
+  @extend %card_style;
   overflow: hidden;
 
   .card-title {
-    font-family: "Noto Serif", serif;
+    font-family: $header_font;
     display: flex;
     margin-bottom: 20px;
 
@@ -16,11 +17,11 @@
       text-align: end;
 
       h2 {
-        @extend %h2_design;
+        @extend %h2_style;
         width: 100%;
 
         &::after {
-          @extend %after_design;
+          @extend %after_style;
           background: linear-gradient(90deg, $main_color, $alt_color);
         }
       }
@@ -124,7 +125,7 @@
     .works-card {
       margin-bottom: 0;
       width: 80%;
-      transform: translate(30px, -110px);
+      transform: translate(30px, -100px);
       position: relative;
       z-index: 2;
       padding: 20px;

@@ -1,7 +1,7 @@
 @use "./../helpers/variables" as *;
 @use "./../helpers/mixins" as *;
 
-.hero {
+header {
   nav {
     width: 100%;
 
@@ -61,7 +61,7 @@
             color: $main_color;
             border-radius: 5px;
 
-            &:hover {
+            &:not(:last-child):hover {
               background-color: $main_color;
               color: $alt_color;
             }
@@ -75,6 +75,22 @@
               display: block;
             }
           }
+
+          .social {
+            display: flex;
+            justify-content: center;
+
+            a {
+              color: inherit;
+              margin: 0 20px;
+
+              .mdi--github,
+              .mdi--twitter {
+                width: 30px;
+                height: 30px;
+              }
+            }
+          }
         }
       }
 
@@ -86,7 +102,7 @@
 }
 
 @media (min-width: 667px) {
-  .hero {
+  header {
     nav {
       .container {
         .nav-list {
@@ -99,7 +115,7 @@
 }
 
 @media (min-width: 768px) {
-  .hero {
+  header {
     nav {
       position: absolute;
       top: 0;
@@ -108,7 +124,7 @@
 
       .container {
         width: 90%;
-        margin: 0 auto;
+        margin: 20px auto;
 
         .logo {
           flex-basis: 16rem;
@@ -127,7 +143,7 @@
 }
 
 @media (min-width: 1024px) {
-  .hero {
+  header {
     nav {
       .container {
         padding: 20px 0;
@@ -140,7 +156,8 @@
           transform: rotateX(0);
           position: initial;
           background-color: transparent;
-          flex-basis: 32rem;
+          flex-basis: 30rem;
+          line-height: 0;
 
           ul {
             flex-direction: row;
@@ -152,8 +169,19 @@
               transition-duration: 0.3s;
               width: initial;
 
-              &:hover {
+              &:not(:last-child):hover {
                 color: $blue_color;
+              }
+            }
+
+            .social {
+              a {
+                margin: 0 10px;
+                transition-duration: 0.3s;
+
+                &:hover {
+                  color: $blue_color;
+                }
               }
             }
           }
@@ -164,7 +192,7 @@
 }
 
 @media (min-width: 1200px) {
-  .hero {
+  header {
     nav {
       .container {
         width: 80%;

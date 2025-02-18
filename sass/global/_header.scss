@@ -1,28 +1,28 @@
 @use "./../helpers/variables" as *;
 @use "./../helpers/mixins" as *;
+@use "./../helpers/placeholders" as *;
 
-.hero {
+header {
   background-color: transparent;
   @include flexDirection(column);
+}
 
+.hero {
   .hero-title {
     @include flexDirection(column);
     padding: 20px 20px 0;
-
+    color: $alt_color;
+    text-align: center;
+  
     h1 {
-      font-family: $header_font;
-      font-size: 2.3rem;
-      color: $alt_color;
-      text-align: center;
+      @extend %h1_style;
     }
-
+  
     .textwriter {
-      font-family: $content_font;
-      font-size: 1.2rem;
-      color: $blue_color;
+      @extend %p_style;
       text-transform: uppercase;
       position: relative;
-
+  
       &::after {
         content: "";
         position: absolute;
@@ -37,13 +37,32 @@
     }
   }
 
-  img {
+  .hero-img {
     object-fit: cover;
     width: 100%;
     height: 100%;
     mix-blend-mode: color-dodge;
   }
 }
+
+.projects-header {
+  margin-bottom: 40px;
+
+  .projects-title {
+    padding: 20px;
+    color: $alt_color;
+    text-align: center;
+  
+    h1 {
+      @extend %h1_style;
+    }
+  
+    p {
+      @extend %p_style;
+    }
+  }
+}
+
 
 @keyframes typing {
   0% {
@@ -67,10 +86,12 @@
 }
 
 @media (min-width: 667px) {
-  .hero {
+  header {
     margin-bottom: 0;
+  }
 
-    img {
+  .hero {
+    .hero-img {
       width: 20rem;
       height: 20rem;
     }
@@ -78,10 +99,12 @@
 }
 
 @media (min-width: 768px) {
-  .hero {
+  header {
     display: block;
     position: relative;
+  }
 
+  .hero {
     .hero-title {
       position: absolute;
       left: 50%;
@@ -89,40 +112,71 @@
       padding: 0;
       top: 50%;
       transform: translate(-20%, -50%);
-
+  
       h1 {
         font-size: 2.8rem;
       }
-
+  
       .textwriter {
         font-size: 1.4rem;
       }
     }
-
-    img {
+  
+    .hero-img {
       width: 50%;
       height: 50%;
+    }
+  }
+
+  .projects-header {
+    .projects-title {
+      padding: 100px 20px 20px;
+
+      h1 {
+        font-size: 4rem;
+      }
+
+      p {
+        font-size: 1.8rem;
+      }
     }
   }
 }
 
 @media (min-width: 1024px) {
-  .hero {
-    width: 100vw;
+  header {
+    width: 100%;
     height: 100vh;
 
     nav .container .toggle-menu {
       display: none;
     }
+  }
 
+  .hero {
     .hero-title {
-      left: 485px;
-      width: 42rem;
+      left: 530px;
+      width: 33rem;
     }
-
-    img {
+  
+    .hero-img {
       width: 50%;
       height: 100%;
+    }
+  }
+
+  .projects-header {
+    height: fit-content;
+
+    .projects-title {
+      padding: 150px 20px 20px;
+      text-align: start;
+      width: 90%;
+      margin: auto;
+
+      p {
+        width: 40rem;
+      }
     }
   }
 }
@@ -130,7 +184,7 @@
 @media (min-width: 1080px) {
   .hero {
     .hero-title {
-      left: 520px;
+      left: 580px;
     }
   }
 }
@@ -140,12 +194,12 @@
     .hero-title {
       left: 620px;
       width: 40rem;
-
+  
       h1 {
         width: 100%;
         font-size: 3rem;
       }
-
+  
       .textwriter {
         font-size: 1.6rem;
       }

@@ -1,8 +1,8 @@
-@use "./global";
-@use "./icons";
-@use "./footer";
-@use "./home/hero";
-@use "./home/nav";
+@use "./global/app";
+@use "./global/icons";
+@use "./global/header";
+@use "./global/footer";
+@use "./global/nav";
 @use "./home/bio";
-@use "./home/works";
 @use "./home/skills";
+@use "./home/works";
