@@ -60,7 +60,6 @@ header {
             padding: 8px 0;
             text-align: center;
             color: $main_color;
-            border-radius: 5px;
 
             a {
               font-family: $content_font;
@@ -75,6 +74,7 @@ header {
           .social {
             display: flex;
             justify-content: center;
+            border-top: 1px solid $main_color;
 
             a {
               color: inherit;
@@ -82,8 +82,8 @@ header {
 
               .fa6-brands--github,
               .fa6-brands--x-twitter {
-                width: 30px;
-                height: 30px;
+                width: 24px;
+                height: 24px;
               }
             }
           }

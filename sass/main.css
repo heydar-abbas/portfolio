@@ -389,7 +389,6 @@ header nav .container .nav-list ul li {
   padding: 8px 0;
   text-align: center;
   color: #222;
-  border-radius: 5px;
 }
 header nav .container .nav-list ul li a {
   font-family: "Roboto", serif;
@@ -402,6 +401,7 @@ header nav .container .nav-list ul li a {
 header nav .container .nav-list ul .social {
   display: flex;
   justify-content: center;
+  border-top: 1px solid #222;
 }
 header nav .container .nav-list ul .social a {
   color: inherit;
@@ -409,8 +409,8 @@ header nav .container .nav-list ul .social a {
 }
 header nav .container .nav-list ul .social a .fa6-brands--github,
 header nav .container .nav-list ul .social a .fa6-brands--x-twitter {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
 }
 header nav .container .open-menu {
   transform: rotateX(0);
