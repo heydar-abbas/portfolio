@@ -2,44 +2,57 @@
 @use "./../helpers/variables" as *;
 
 footer {
-  @include flexDirection(column);
-  font-family: $content_font;
-  padding: 20px;
-  color: $alt_color;
   box-shadow: 0 5px 20px #111;
 
-  p {
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .container {
+    @include flexDirection(column);
+    font-family: $content_font;
+    padding: 20px;
+    color: $alt_color;
 
-    .mdi--copyright {
-      margin-right: 5px;
-      width: 24px;
-      height: 24px;
+    p {
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .mdi--copyright {
+        margin-right: 5px;
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .footer-social {
+      color: $alt_color;
+      padding: 10px;
+
+      a {
+        padding: 10px;
+        color: $alt_color;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
+}
 
-  .footer-social {
-    color: $alt_color;
-    padding: 10px;
-    
-    a {
-      padding: 10px;
-      color: $alt_color;
-      text-decoration: none;
-      
-      &:hover {
-        text-decoration: underline;
-      }
+@media (min-width: 667px) {
+  footer {
+    .container {
+      padding: 20px 0;
     }
   }
 }
 
 @media (min-width: 768px) {
   footer {
-    flex-direction: row;
-    justify-content: space-between;
+    .container {
+      @include flexDirection(row);
+      justify-content: space-between;
+    }
   }
 }

@@ -5,10 +5,9 @@ header {
   nav {
     width: 100%;
 
-    .container {
+    .nav-container {
       @include flexDirection(row);
       justify-content: space-between;
-      width: 100%;
       color: $alt_color;
       position: relative;
 
@@ -100,7 +99,7 @@ header {
 @media (min-width: 667px) {
   header {
     nav {
-      .container {
+      .nav-container {
         .nav-list {
           width: 90%;
           left: 36px;
@@ -118,7 +117,7 @@ header {
       left: 0;
       z-index: 1;
 
-      .container {
+      .nav-container {
         width: 90%;
         margin: 0 auto;
 
@@ -143,7 +142,11 @@ header {
 @media (min-width: 1024px) {
   header {
     nav {
-      .container {
+      .nav-container {
+        .toggle-menu {
+          display: none;
+        }
+        
         .nav-list {
           transform: rotateX(0);
           position: initial;

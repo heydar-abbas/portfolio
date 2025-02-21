@@ -1,4 +1,6 @@
 @use "./../helpers/variables" as *;
+@use "./../helpers/mixins" as *;
+@use "./../helpers/placeholders" as *;
 
 * {
   padding: 0;
@@ -8,18 +10,24 @@
 
 body {
   background-color: $main_color;
+
+  header {
+    background-color: transparent;
+    @include flexDirection(column);
+  }
 }
 
-h3 {
-  font-size: 14rem;
-  background-image: url("./../assets/images/aaron.webp");
-  background-size: cover;
-  background-clip: text;
-  color: transparent;
+@media (min-width: 667px) {
+  body {
+    .container {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
 }
 
 @media (min-width: 1200px) {
-  .content {
+  .home-content {
     width: 80%;
     margin: auto;
   }

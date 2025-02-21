@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,9 +17,9 @@
     <script src="./../js/main.js" defer></script>
   </head>
   <body>
-    <header class="projects-header">
+    <header class="works-header">
       <nav>
-        <div class="container">
+        <div class="nav-container">
           <div class="logo"><a href="/">HA</a></div>
           <!-- <div class="logo"><a href="/portfolio">HA</a></div> -->
           <div class="toggle-menu">
@@ -44,7 +44,7 @@
           </div>
         </div>
       </nav>
-      <div class="projects-title">
+      <div class="works-title container">
         <h1>My Projects</h1>
         <p>
           See my most recent projects below to get an idea of my experience.
@@ -52,13 +52,30 @@
       </div>
     </header>
 
-    <article>article</article>
+    <main class="works container">
+      <ul>
+        <li>
+          <a class="card" href="#">
+            <span class="title">First work</span>
+            <img src="https://picsum.photos/300/200" alt="Work image">
+          </a>
+        </li>
+        <li>
+          <a class="card" href="#">
+            <span class="title">Second work</span>
+            <img src="https://picsum.photos/300/200" alt="Work image">
+          </a>
+        </li>
+      </ul>
+    </main>
 
     <footer>
-      <p><span class="mdi--copyright"></span> 2025 - Heydar Abbas</p>
-      <div class="footer-social">
-        <a href="https://github.com/heydar-abbas">Github</a>
-        <a href="https://x.com/_h_a_dev">X <small>(Twitter)</small></a>
+      <div class="container">
+        <p><span class="mdi--copyright"></span> 2025 - Heydar Abbas</p>
+        <div class="footer-social">
+          <a href="https://github.com/heydar-abbas">Github</a>
+          <a href="https://x.com/_h_a_dev">X <small>(Twitter)</small></a>
+        </div>
       </div>
     </footer>
   </body>

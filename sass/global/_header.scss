@@ -2,16 +2,12 @@
 @use "./../helpers/mixins" as *;
 @use "./../helpers/placeholders" as *;
 
-header {
-  background-color: transparent;
-  @include flexDirection(column);
-}
-
 .hero {
+  @include flexDirection(column);
+  justify-content: center;
+
   .hero-title {
-    @include flexDirection(column);
-    color: $alt_color;
-    text-align: center;
+    @extend %title_style;
   
     h1 {
       @extend %h1_style;
@@ -37,20 +33,17 @@ header {
   }
 
   .hero-img {
-    object-fit: cover;
     width: 100%;
-    height: 100%;
+    object-fit: cover;
     mix-blend-mode: color-dodge;
   }
 }
 
-.projects-header {
+.works-header {
   margin-bottom: 40px;
 
-  .projects-title {
-    padding: 20px;
-    color: $alt_color;
-    text-align: center;
+  .works-title {
+    @extend %title_style;
   
     h1 {
       @extend %h1_style;
@@ -85,29 +78,38 @@ header {
 }
 
 @media (min-width: 667px) {
-  header {
-    margin-bottom: 0;
-  }
-
   .hero {
+    .hero-title {
+      padding: 0;
+    }
+
     .hero-img {
       width: 20rem;
       height: 20rem;
+    }
+  }
+
+  .works-header {
+    .works-title {
+      padding: 0;
     }
   }
 }
 
 @media (min-width: 768px) {
   header {
-    display: block;
+    flex-direction: row !important;
     position: relative;
   }
 
   .hero {
+    display: block;
+    width: 100%;
+
     .hero-title {
       position: absolute;
       left: 50%;
-      width: 30rem;
+      width: 24rem;
       padding: 0;
       top: 50%;
       transform: translate(-20%, -50%);
@@ -117,6 +119,7 @@ header {
       }
   
       .textwriter {
+        display: inline-block;
         font-size: 1.4rem;
       }
     }
@@ -159,7 +162,6 @@ header {
     }
   
     .hero-img {
-      width: 50%;
       height: 100%;
     }
   }

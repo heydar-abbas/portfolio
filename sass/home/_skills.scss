@@ -2,11 +2,12 @@
 @use "./../helpers/variables" as *;
 @use "./../helpers/placeholders" as *;
 
-.content .skills-card {
+.home-content .skills-card {
   font-family: $header_font;
   @extend %card_style;
   @include flexDirection(column);
   justify-content: center;
+  padding: 20px;
 
   .card-title {
     display: none;
@@ -43,30 +44,44 @@
 }
 
 @media (min-width: 667px) {
-  .content .skills-card {
+  .home-content .skills-card {
     @include flexDirection(row);
     width: 90%;
     box-shadow: 0 10px 20px $shadow_color;
     border-radius: 5px;
+    margin: 0 auto 20px;
   }
 }
 
 @media (min-width: 768px) {
-  .content {
+  .home-content {
     .skills-card {
       width: 80%;
-      transform: translate(-30px, -150px);
+      padding: 80px 20px 20px;
+      transform: translate(-3rem, -9rem);
 
       .card-title {
         @include flexDirection(column);
         justify-content: center;
         align-items: center;
         width: 50%;
+
+        h3 {
+          @include number_style;
+        }
       }
   
       .card-content {
         width: 50%;
       }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .home-content {
+    .skills-card {
+      transform: translate(-3rem, -6rem);
     }
   }
 }

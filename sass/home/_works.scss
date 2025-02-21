@@ -2,9 +2,10 @@
 @use "./../helpers/variables" as *;
 @use "./../helpers/placeholders" as *;
 
-.content .works-card {
+.home-content .works-card {
   font-family: $content_font;
   @extend %card_style;
+  padding: 20px;
   overflow: hidden;
 
   .card-title {
@@ -104,10 +105,11 @@
 }
 
 @media (min-width: 667px) {
-  .content .works-card {
+  .home-content .works-card {
     width: 90%;
     box-shadow: 0 10px 20px $shadow_color;
     border-radius: 5px;
+    margin: 0 auto 20px;
 
     .card-content {
       @include flexDirection(row);
@@ -121,11 +123,11 @@
 }
 
 @media (min-width: 768px) {
-  .content {
+  .home-content {
     .works-card {
       margin-bottom: 0;
       width: 80%;
-      transform: translate(30px, -100px);
+      transform: translate(3rem, -6.2rem);
       position: relative;
       z-index: 2;
       padding: 20px;
@@ -145,9 +147,10 @@
         }
 
         h3 {
+          @include number_style;
           display: flex;
-          width: 50%;
           justify-content: center;
+          width: 50%;
         }
       }
 
@@ -166,7 +169,7 @@
 }
 
 @media (min-width: 1024px) {
-  .content {
+  .home-content {
     .works-card {
       .card-content {
         .work {
@@ -178,9 +181,12 @@
 }
 
 @media (min-width: 1200px) {
-  .content {
+  .home-content {
     .works-card {
+      transform: translate(3rem, -2.6rem);
+
       .card-content {
+        gap: 1rem;
         .work {
           width: 16rem;
 

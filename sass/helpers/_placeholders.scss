@@ -1,17 +1,20 @@
 @use "./variables" as *;
 
+%title_style {
+  padding: 20px;
+  color: $alt_color;
+  text-align: center;
+}
+
 %card_style {
   background-color: $main_color;
   color: $alt_color;
-  padding: 60px 20px 20px;
-  margin: 0 auto 20px;
   width: 100%;
 }
 
 %h1_style {
   font-family: $header_font;
   font-size: 2.3rem;
-  padding: 10px 0;
 }
 
 %h2_style {
@@ -26,6 +29,7 @@
   font-family: $content_font;
   font-size: 1.2rem;
   color: $blue_color;
+  padding: 10px 0;
 }
 
 %after_style {

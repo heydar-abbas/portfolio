@@ -17,9 +17,9 @@
     <script src="./js/main.js" defer></script>
   </head>
   <body>
-    <header class="hero">
+    <header>
       <nav>
-        <div class="container">
+        <div class="nav-container">
           <div class="logo"><a href="/">HA</a></div>
           <!-- <div class="logo"><a href="/portfolio">HA</a></div> -->
           <div class="toggle-menu">
@@ -44,14 +44,16 @@
           </div>
         </div>
       </nav>
-      <div class="hero-title">
-        <h1>Hello, my name is Heydar Abbas</h1>
-        <p class="textwriter">I'm fullstack web developer</p>
+      <div class="hero">
+        <div class="hero-title">
+          <h1>Hello, my name is Heydar Abbas</h1>
+          <p class="textwriter">I'm fullstack web developer</p>
+        </div>
+        <img class="hero-img" src="./assets/images/hero.webp" alt="hero image" />
       </div>
-      <img class="hero-img" src="./assets/images/hero.webp" alt="hero image" />
     </header>
 
-    <article class="content">
+    <main class="home-content">
       <!-- Biography -->
       <div class="bio-card">
         <div class="card-title">
@@ -133,7 +135,7 @@
         </div>
         <div class="card-content">
           <p>Programming language & technologies</p>
-          <h2>The skills</h2>
+          <h2>Skills</h2>
           <div class="skills-list">
             <ul>
               <li>HTML</li>
@@ -157,13 +159,15 @@
           </div>
         </div>
       </div>
-    </article>
+    </main>
 
     <footer>
-      <p><span class="mdi--copyright"></span> 2025 - Heydar Abbas</p>
-      <div class="footer-social">
-        <a href="https://github.com/heydar-abbas">Github</a>
-        <a href="https://x.com/_h_a_dev">X <small>(Twitter)</small></a>
+      <div class="container">
+        <p><span class="mdi--copyright"></span> 2025 - Heydar Abbas</p>
+        <div class="footer-social">
+          <a href="https://github.com/heydar-abbas">Github</a>
+          <a href="https://x.com/_h_a_dev">X <small>(Twitter)</small></a>
+        </div>
       </div>
     </footer>
   </body>
