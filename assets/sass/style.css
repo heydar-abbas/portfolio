@@ -519,7 +519,7 @@ header nav .nav-content .open-menu {
   }
   .home-content .bio-card .card-title h3 {
     font-size: 14rem;
-    background-image: url("/assets/images/aaron.webp");
+    background-image: url("/portfolio/assets/images/aaron.webp");
     background-size: cover;
     -webkit-background-clip: text;
             background-clip: text;
@@ -586,7 +586,7 @@ header nav .nav-content .open-menu {
   }
   .home-content .skills-card .card-title h3 {
     font-size: 14rem;
-    background-image: url("/assets/images/aaron.webp");
+    background-image: url("/portfolio/assets/images/aaron.webp");
     background-size: cover;
     -webkit-background-clip: text;
             background-clip: text;
@@ -725,7 +725,7 @@ header nav .nav-content .open-menu {
   }
   .home-content .works-card .card-title h3 {
     font-size: 14rem;
-    background-image: url("/assets/images/aaron.webp");
+    background-image: url("/portfolio/assets/images/aaron.webp");
     background-size: cover;
     -webkit-background-clip: text;
             background-clip: text;
