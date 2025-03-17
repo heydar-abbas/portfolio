@@ -1,5 +1,12 @@
 const icon = document.querySelector(".mdi--hamburger-menu");
 const nav_list = document.querySelector(".nav-list");
+const activePage = window.location.href;
+
+document.querySelectorAll("nav ul li a").forEach((link) => {
+  if (link.href === activePage) {
+    link.classList.add("active");
+  }
+});
 
 document.querySelector(".toggle-menu").addEventListener("click", function () {
   if (icon.classList.contains("mdi--hamburger-menu")) {

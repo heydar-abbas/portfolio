@@ -35,6 +35,10 @@ header {
   }
 }
 
+.active {
+  color: $blue_color !important;
+}
+
 @media (width >= 40rem) {
   .home-content {
     display: flex;
