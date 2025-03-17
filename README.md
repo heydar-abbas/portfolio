@@ -1,7 +1,7 @@
 <h1 align="center">
   My Personal Page ( Portfolio )<br/>
   <a href="https://heydar-abbas.github.io/portfolio/" target="_blank">
-    <small>heydar-abbas.github.io/portfolio</small>
+    <span style="font-size: 18px">heydar-abbas.github.io/portfolio</span>
   </a>
 </h1>
 <!-- <div align="center">
@@ -22,6 +22,23 @@ This project was built using these technologies.
 ## Getting Started
 
 Clone down this repository. You will need `node.js` and `git` installed globally on your machine.
+
+From your command line, first clone Portfolio:
+
+```bash
+# Clone the repository
+$ git clone https://github.com/heydar-abbas/portfolio.git
+
+# Move into the repository
+$ cd portfolio
+
+# Remove the current origin repository
+$ git remote remove origin
+```
+
+After that, you can install the dependencies.
+
+---
 
 ### 🛠 Installation and Setup Instructions
 
