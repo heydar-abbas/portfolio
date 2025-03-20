@@ -16,15 +16,24 @@
 %h1_style {
   font-family: $header_font;
   font-size: 2.5rem;
+  font-weight: normal;
   margin-bottom: 10px;
 }
 
 %h2_style {
   text-transform: uppercase;
   font-size: 1.9rem;
+  font-weight: normal;
   position: relative;
   margin-bottom: 0.5rem;
   letter-spacing: 4px;
+}
+
+%h4_style {
+  color: $blue_color;
+  text-transform: capitalize;
+  font-weight: normal;
+  padding: 0;
 }
 
 %p_style {

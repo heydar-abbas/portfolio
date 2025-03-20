@@ -1,5 +1,5 @@
 const icon = document.querySelector(".mdi--hamburger-menu");
-const nav_list = document.querySelector(".nav-list");
+const navList = document.querySelector(".nav-list");
 const activePage = window.location.href;
 
 document.querySelectorAll("nav ul li a").forEach((link) => {
@@ -11,9 +11,13 @@ document.querySelectorAll("nav ul li a").forEach((link) => {
 document.querySelector(".toggle-menu").addEventListener("click", function () {
   if (icon.classList.contains("mdi--hamburger-menu")) {
     icon.classList.replace("mdi--hamburger-menu", "mdi--window-close");
-    nav_list.classList.add("open-menu");
+    navList.classList.add("open-menu");
   } else {
     icon.classList.replace("mdi--window-close", "mdi--hamburger-menu");
-    nav_list.classList.remove("open-menu");
+    navList.classList.remove("open-menu");
   }
+});
+
+document.querySelector(".contact-dropdown").addEventListener("click", () => {
+  document.querySelector(".dropdown").classList.toggle("open");
 });

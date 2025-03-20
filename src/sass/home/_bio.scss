@@ -13,9 +13,7 @@
 
   .card-content {
     h4 {
-      color: $blue_color;
-      text-transform: capitalize;
-      padding: 0;
+      @extend %h4_style;
     }
 
     h2 {

@@ -42,13 +42,13 @@ header {
         position: absolute;
         top: 80px;
         left: 18px;
-        background-color: #eee;
+        background-color: #ddd;
         padding: 20px;
         border-radius: 5px;
         z-index: 2;
         transform: rotateX(90deg);
         transform-origin: top;
-        transition-duration: 0.5s;
+        transition-duration: 0.2s;
 
         ul {
           display: flex;
@@ -59,24 +59,60 @@ header {
           li {
             list-style: none;
             width: 100%;
-            padding: 10px 0;
+            padding: 10px;
             text-align: center;
             color: $main_color;
+            font-size: 1.2rem;
+            font-family: $content_font;
+            cursor: pointer;
 
             a {
-              font-family: $content_font;
-              text-decoration: none;
               color: inherit;
-              font-weight: bold;
-              font-size: 1.2rem;
+              text-decoration: none;
               display: block;
+            }
+          }
+
+          .contact-dropdown {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            & > span {
+              display: flex;
+            }
+
+            .mdi--chevron-down {
+              width: 24px;
+              height: 24px;
+            }
+
+            .dropdown {
+              padding: 10px;
+              box-shadow: inset 0 0 10px $gray_light;
+              border-radius: 5px;
+
+              li {
+                a {
+                  font-size: 14px;
+                  display: flex;
+                  align-items: center;
+                  color: $gray_color;
+                }
+              }
+            }
+
+            .ic--baseline-telegram,
+            .ic--baseline-email {
+              width: 20px;
+              height: 20px;
+              margin-right: 10px;
             }
           }
 
           .social {
             display: flex;
             justify-content: center;
-            border-top: 1px solid #999;
 
             a {
               color: inherit;
@@ -133,6 +169,12 @@ header {
           width: 93%;
           top: 6rem;
           left: 2rem;
+
+          .contact-dropdown {
+            .dropdown {
+              width: 50%;
+            }
+          }
         }
       }
     }
@@ -146,41 +188,90 @@ header {
         .logo {
           text-align: initial;
         }
-  
+
         .toggle-menu {
           display: none;
         }
-        
+
         .nav-list {
           transform: rotateX(0);
           position: initial;
           background-color: transparent;
           flex-basis: 30rem;
-          line-height: 0;
           padding: 0;
-  
+
           ul {
             flex-direction: row;
             justify-content: space-around;
-  
+
             li {
               color: inherit;
               padding: 0;
-              transition-duration: 0.3s;
+              transition-duration: $duration;
               width: initial;
-  
+
               &:not(:last-child):hover {
                 color: $blue_color;
               }
             }
-  
+
+            .contact-dropdown {
+              position: relative;
+
+              .dropdown {
+                flex-direction: column;
+                position: absolute;
+                width: 16rem;
+                top: 36px;
+                left: 50%;
+                transform: translateX(-50%) rotateX(90deg);
+                background-color: $alt_color;
+                border-radius: 6px;
+                padding: 10px;
+                transition-duration: $duration;
+                transform-origin: top;
+                box-shadow: none;
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  top: -8px;
+                  left: 50%;
+                  transform: translate(-50%) rotate(45deg);
+                  width: 0;
+                  height: 0;
+                  border: 10px solid $alt_color;
+                  border-right-color: transparent;
+                  border-bottom-color: transparent;
+                  border-radius: 5px;
+                }
+
+                li {
+                  width: 100%;
+
+                  a {
+                    padding: 10px;
+                    transition-duration: $duration;
+
+                    &:hover {
+                      background-color: #99999952;
+                    }
+                  }
+                }
+
+                &.open {
+                  transform: translateX(-50%) rotateX(0deg);
+                }
+              }
+            }
+
             .social {
               border-top: 0;
-              
+
               a {
                 margin: 0 10px;
-                transition-duration: 0.3s;
-  
+                transition-duration: $duration;
+
                 &:hover {
                   color: $blue_color;
                 }

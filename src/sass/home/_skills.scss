@@ -15,8 +15,7 @@
     width: 100%;
 
     h4 {
-      color: $blue_color;
-      text-transform: capitalize;
+      @extend %h4_style;
     }
 
     h2 {

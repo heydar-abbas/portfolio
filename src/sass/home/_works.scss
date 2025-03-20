@@ -28,9 +28,7 @@
       }
 
       & > h4 {
-        color: $blue_color;
-        text-transform: capitalize;
-        align-self: end;
+        @extend %h4_style;
       }
     }
 
@@ -76,7 +74,6 @@
         background-color: $main_color;
         border-radius: 5px;
         padding: 5px 10px;
-        font-weight: bold;
         font-size: 0.8rem;
       }
     }
