@@ -114,31 +114,31 @@
     }
   }
 
-  .works-link {
-    width: 100%;
+  .view-all-btn {
+    width: 20rem;
+    margin: 0 auto;
+    border: 2px solid $blue_color;
+    border-radius: 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    color: $alt_color;
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    position: relative;
 
-    a {
-      box-shadow: 0px 10px 14px -7px #276873;
-      background: linear-gradient(#599bb3, $blue_color);
-      border-radius: 5px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 0;
-      color: $alt_color;
-      text-transform: capitalize;
-      text-decoration: none;
-      font-size: 1.3rem;
+    .arrow-right {
+      position: absolute;
+      top: 6px;
+      right: 70px;
+      width: 30px;
+      height: 30px;
+    }
 
-      .arrow-right {
-        margin-left: 8px;
-        width: 30px;
-        height: 30px;
-      }
-
-      &:hover {
-        background: linear-gradient($blue_color, #599bb3);
-      }
+    &:focus {
+      background-color: $blue_color;
     }
   }
 }
@@ -204,15 +204,6 @@
       .card-content {
         flex-wrap: nowrap;
       }
-
-      .works-link {
-        display: flex;
-        justify-content: end;
-
-        a {
-          width: 12rem;
-        }
-      }
     }
   }
 }
@@ -227,6 +218,40 @@
           &:nth-child(3) {
             display: block;
           }
+        }
+      }
+
+      .view-all-btn {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 50px;
+          background-color: $blue_color;
+          z-index: -1;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 300ms ease-in-out;
+        }
+
+        &:hover::before {
+          transform: scaleX(1);
+        }
+
+        .arrow-right {
+          right: -30px;
+          transition: all 300ms ease-in-out;
+        }
+
+        &:hover .arrow-right {
+          right: 70px;
         }
       }
     }
