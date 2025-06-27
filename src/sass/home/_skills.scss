@@ -3,7 +3,6 @@
 @use "./../helpers/placeholders" as *;
 
 .home-content .skills-card {
-  font-family: $header_font;
   @extend %card_style;
   margin-bottom: 1rem;
 
@@ -28,7 +27,6 @@
     }
 
     .skills-list {
-      font-family: $content_font;
       display: flex;
 
       ul {

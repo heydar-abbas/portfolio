@@ -3,7 +3,6 @@
 @use "./../helpers/placeholders" as *;
 
 .home-content .bio-card {
-  font-family: $header_font;
   @extend %card_style;
   margin-bottom: 1rem;
 
@@ -27,7 +26,6 @@
     }
 
     p {
-      font-family: $content_font;
       line-height: 1.7rem;
       padding: 10px 0;
     }

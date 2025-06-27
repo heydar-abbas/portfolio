@@ -7,13 +7,42 @@
   flex-direction: column;
   margin-bottom: 1rem;
 
+  .page-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .title {
+      margin-bottom: 1rem;
+    }
+
+    .my-resume {
+      display: inline-flex;
+
+      a {
+        padding: 15px 30px;
+        background-color: $blue_color;
+        color: #ddd;
+        border-radius: 50px;
+        list-style: none;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: default;
+
+        &:hover {
+          box-shadow: 0 0 20px $shadow_blue;
+        }
+      }
+    }
+  }
+
   .hero-img {
     img {
-      width: 100%;
-      height: 100%;
+      width: 24rem;
+      height: 24rem;
       object-fit: cover;
-      mix-blend-mode: color-dodge;
-      aspect-ratio: 1/1;
+      // mix-blend-mode: color-dodge;
     }
   }
 
@@ -62,10 +91,20 @@
   .hero {
     flex-direction: row-reverse;
     margin-bottom: 0;
+    height: 56dvh;
+
+    .page-title {
+      flex-basis: 50em;
+      align-items: start;
+    }
 
     .hero-img {
-      width: 45vw;
-      height: 16rem;
+      flex-basis: 50em;
+
+      img {
+        width: 18rem;
+        height: auto;
+      }
     }
   }
 }
@@ -74,14 +113,24 @@
   .hero {
     display: flex;
     width: 100%;
+    height: 80dvh;
     flex-direction: row-reverse;
 
+    .page-title {
+      flex-basis: 50em;
+
+      .my-resume {
+        top: 70%;
+        left: 0;
+      }
+    }
+
     .hero-img {
-      width: 56vw;
-      height: 100%;
+      flex-basis: 50em;
 
       img {
-        aspect-ratio: unset;
+        width: 100%;
+        height: 100%;
       }
     }
 
@@ -94,22 +143,18 @@
 
 @media (width >= 64rem) {
   .hero {
-    height: 100vh;
-
-    .hero-img {
-      width: 85vw;
-    }
+    height: 100dvh;
   }
 }
 
 @media (width >= 80rem) {
   .hero {
-    .hero-img {
-      width: 80vw;
-    }
-
     .textwriter {
       font-size: 1.6rem;
+    }
+
+    .hero-img img {
+      width: 32rem;
     }
   }
 }

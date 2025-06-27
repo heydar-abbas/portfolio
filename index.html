@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#222" />
-    <title>Heydar Abbas - Personal page</title>
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,14 +11,32 @@
       href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
+    <!-- Favorit icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Heydar Abbas" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <!-- /Favorit icon -->
     <link rel="stylesheet" href="/src/sass/index.scss" />
     <script type="module" src="/src/js/index.js" defer></script>
+    <title>Heydar Abbas - Portfolio</title>
   </head>
+
   <body>
     <header>
       <nav>
-        <div class="nav-content container">
+        <div class="container">
           <div class="logo"><a href="/portfolio/">HA</a></div>
           <div class="toggle-menu">
             <span class="mdi--hamburger-menu icon"></span>
@@ -61,18 +78,28 @@
           </div>
         </div>
       </nav>
-      <div class="hero">
-        <div class="page-title">
-          <div>
-            <h1>Hello, my name is Heydar Abbas</h1>
-            <p class="textwriter">I'm fullstack web developer</p>
-          </div>
-        </div>
-        <div class="hero-img">
-          <img src="/src/images/hero.webp" alt="hero image" />
-        </div>
-      </div>
     </header>
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="page-title">
+        <div class="title">
+          <h1>Hello, my name is Heydar Abbas</h1>
+          <p class="textwriter">I'm fullstack web developer</p>
+        </div>
+        <!-- Download resume -->
+        <div class="my-resume">
+          <a href="/portfolio/Heydar_Abbas_resume.pdf" download>
+            Get my resume
+          </a>
+        </div>
+        <!-- /Download resume -->
+      </div>
+      <div class="hero-img">
+        <img src="/src/images/hero.webp" alt="hero image" />
+      </div>
+    </div>
+    <!-- /Hero -->
 
     <main>
       <div class="home-content container">
@@ -86,14 +113,11 @@
             <h2>Biography</h2>
             <span class="line-gradient"></span>
             <p>
-              I began my programming journey in 2021 and am currently honing my
-              expertise in front-end development, with a strong focus on
-              JavaScript, Vue, and modern web technologies. Alongside building
-              responsive user interfaces, I've deepened my understanding of core
-              concepts like object-oriented programming, data structures, and
-              database design. I'm passionate about leveraging these skills to
-              contribute to open-source projects that solve real-world problems,
-              particularly in improving accessibility or developer tools.
+              Motivated self-taught web developer with a strong passion for
+              building user interfaces, specializing in front-end development.
+              In addition to creating responsive and intuitive interfaces, I
+              have deepened my understanding of core concepts such as
+              object-oriented programming, data structures, and database design.
             </p>
           </div>
         </section>
@@ -184,8 +208,15 @@
       <div class="container">
         <p><span class="mdi--copyright"></span> 2025 - Heydar Abbas</p>
         <div class="footer-social">
-          <a href="https://github.com/heydar-abbas">Github</a>
-          <a href="https://x.com/_h_a_dev">X <small>(Twitter)</small></a>
+          <a href="https://github.com/heydar-abbas">
+            <span class="fa6-brands--github"></span>
+          </a>
+          <a href="https://www.linkedin.com/in/heydarabbas">
+            <span class="mdi--linkedin"></span>
+          </a>
+          <a href="https://x.com/_h_a_dev">
+            <span class="fa6-brands--x-twitter"></span>
+          </a>
         </div>
       </div>
     </footer>

@@ -3,13 +3,11 @@
 @use "./../helpers/placeholders" as *;
 
 .works-card {
-  font-family: $content_font;
   @extend %card_style;
   flex-wrap: wrap;
   margin-bottom: 1rem;
 
   .card-title {
-    font-family: $header_font;
     margin-bottom: 20px;
     width: 100%;
 
