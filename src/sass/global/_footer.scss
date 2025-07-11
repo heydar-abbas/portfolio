@@ -2,7 +2,7 @@
 @use "./../helpers/variables" as *;
 
 footer {
-  box-shadow: 0 5px 20px #111;
+  box-shadow: 0 -5px 20px #111;
 
   .container {
     display: flex;
@@ -32,13 +32,17 @@ footer {
 
       a {
         color: inherit;
-        margin: 0 20px;
+        margin: 0 1rem;
 
         .fa6-brands--github,
-        .fa6-brands--x-twitter,
-        .mdi--linkedin {
+        .fa6-brands--x-twitter {
           width: 20px;
           height: 20px;
+        }
+
+        .mdi--linkedin {
+          width: 24px;
+          height: 24px;
         }
       }
     }

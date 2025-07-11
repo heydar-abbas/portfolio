@@ -27,12 +27,9 @@
     }
 
     .skills-list {
-      display: flex;
-
       ul {
-        line-height: 1.7rem;
-        padding: 20px;
-        flex-basis: 50%;
+        line-height: 2rem;
+        padding: 1.25rem;
       }
     }
   }
@@ -43,7 +40,7 @@
     .skills-card {
       width: 90%;
       box-shadow: 0 10px 20px $shadow_color;
-      border-radius: 5px;
+      border-radius: 20px;
       margin: 0 auto 20px;
     }
   }

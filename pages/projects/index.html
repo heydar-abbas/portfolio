@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#222" />
-    <title>Heydar Abbas - Projects</title>
+    <title>Heydar Abbas - Works</title>
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,14 +12,31 @@
       href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
+    <!-- Favorit icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Heydar Abbas" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <!-- /Favorit icon -->
     <link rel="stylesheet" href="/src/sass/index.scss" />
     <script type="module" src="/src/js/index.js" defer></script>
   </head>
   <body>
-    <header id="worksHeader">
+    <header>
+      <!-- Navigation bar -->
       <nav>
-        <div class="nav-content container">
+        <div class="container">
           <div class="logo"><a href="/portfolio/">HA</a></div>
           <div class="toggle-menu">
             <span class="mdi--hamburger-menu icon"></span>
@@ -29,10 +46,10 @@
               <li><a href="/portfolio/">Home</a></li>
               <li><a href="/portfolio/pages/projects/">Projects</a></li>
               <li class="contact-dropdown">
-                <span>
-                  <span>Contact me</span>
+                <div>
+                  <div>Contact me</div>
                   <span class="mdi--chevron-down"></span>
-                </span>
+                </div>
 
                 <ul class="dropdown">
                   <li>
@@ -42,9 +59,9 @@
                     </a>
                   </li>
                   <li>
-                    <a href="mailto:haydar.abbas40@outlook.com">
+                    <a href="mailto:haydar.abbas41@gmail.com">
                       <span class="ic--baseline-email"></span>
-                      <span>haydar.abbas40@outlook.com</span>
+                      <span>haydar.abbas41@gmail.com</span>
                     </a>
                   </li>
                 </ul>
@@ -52,6 +69,9 @@
               <li class="social">
                 <a href="https://github.com/heydar-abbas">
                   <span class="fa6-brands--github"></span>
+                </a>
+                <a href="https://www.linkedin.com/in/heydarabbas">
+                  <span class="mdi--linkedin"></span>
                 </a>
                 <a href="https://x.com/_h_a_dev">
                   <span class="fa6-brands--x-twitter"></span>
@@ -61,28 +81,46 @@
           </div>
         </div>
       </nav>
-      <div class="works-header container">
-        <div class="page-title">
-          <div>
-            <h1>My Recent Works</h1>
-            <p>
-              See my most recent works below to get an idea of my experience.
-            </p>
-          </div>
+      <!-- /Navigation bar -->
+    </header>
+    <!-- Page Title -->
+    <article class="container">
+      <div class="works-page-title">
+        <div class="title">
+          <h1>My Recent Works</h1>
+          <p>See my most recent works below to get an idea of my experience.</p>
         </div>
       </div>
-    </header>
-
-    <main>
-      <div class="work-content container">My works</div>
-    </main>
-
+    </article>
+    <!-- /Page Title -->
+    <!-- Works -->
+    <article class="container">
+      <div class="works-content">
+        <div class="work-card">
+          <figure>
+            <img
+              src="./../../src/images/hisouby_thumb.png"
+              alt="Hisouby thumb"
+            />
+            <figcaption class="caption">Hisouby</figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+    <!-- /Works -->
     <footer>
       <div class="container">
         <p><span class="mdi--copyright"></span> 2025 - Heydar Abbas</p>
         <div class="footer-social">
-          <a href="https://github.com/heydar-abbas">Github</a>
-          <a href="https://x.com/_h_a_dev">X <small>(Twitter)</small></a>
+          <a href="https://github.com/heydar-abbas">
+            <span class="fa6-brands--github"></span>
+          </a>
+          <a href="https://www.linkedin.com/in/heydarabbas">
+            <span class="mdi--linkedin"></span>
+          </a>
+          <a href="https://x.com/_h_a_dev">
+            <span class="fa6-brands--x-twitter"></span>
+          </a>
         </div>
       </div>
     </footer>

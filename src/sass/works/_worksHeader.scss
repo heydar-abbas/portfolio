@@ -2,68 +2,85 @@
 @use "./../helpers/mixins" as *;
 @use "./../helpers/placeholders" as *;
 
-#worksHeader {
-  height: 50vh;
+.works-page-title {
+  margin-bottom: 2rem;
+  padding: 1.25rem;
 
-  .works-header {
-    height: 100%;
-  
-    .page-title {
-      & > div {
+  .title {
+    width: 100%;
+    text-align: center;
+
+    h1 {
+      font-size: 3rem;
+      color: $alt_color;
+    }
+
+    p {
+      @extend %p_style;
+    }
+  }
+}
+
+.works-content {
+  padding: 1.25rem;
+
+  .work-card {
+    figure {
+      text-align: center;
+      color: $alt_color;
+
+      img {
         width: 100%;
-        text-align: center;
-  
-        h1 {
-          font-size: 3.4rem;
-        }
-  
-        p {
-          @extend %p_style;
-        }
+        border-radius: 8px;
+      }
+
+      .caption {
+        padding: 1.25rem 0;
+        font-size: 1.25rem;
+        font-weight: bold;
       }
     }
   }
 }
 
 @media (width >= 40rem) {
-  #worksHeader {
-    height: 65vh;
+  .works-page-title {
+    padding-top: 5rem;
   }
-}
 
-@media (width >= 48rem) {
-  #worksHeader {
-    height: 30vh;
+  .works-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
 
-    .works-header {
-      display: flex;
-      justify-content: center;
-      padding-top: 7rem;
-
-      .page-title {
-        width: 100%;
-      }
+    .work-card {
+      padding: 5px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px $shadow_color;
     }
   }
 }
 
+@media (width >= 48rem) {
+  .works-page-title {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1.25rem 0;
+    width: 100%;
+  }
+}
+
 @media (width >= 64rem) {
-  #worksHeader {
-    height: 50vh;
+  .works-page-title {
+    display: block;
 
-    .works-header {
-      display: block;
+    .title {
+      text-align: initial;
+      padding: 20px;
+      width: 46vw;
 
-      .page-title {
-        & > div {
-          text-align: initial;
-          padding: 20px;
-          width: 46vw;
-
-          p {
-            font-size: 1.6rem;
-          }
-        }
+      p {
+        font-size: 1.6rem;
       }
     }
   }

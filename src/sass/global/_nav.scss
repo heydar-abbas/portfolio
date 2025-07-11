@@ -74,8 +74,9 @@ nav {
           flex-direction: column;
           align-items: center;
 
-          & > span {
+          & > div {
             display: flex;
+            margin-bottom: 0.5rem;
           }
 
           .mdi--chevron-down {
@@ -119,6 +120,10 @@ nav {
               width: 24px;
               height: 24px;
             }
+            .mdi--linkedin {
+              width: 26px;
+              height: 26px;
+            }
           }
         }
       }
@@ -136,6 +141,10 @@ nav {
       .nav-list {
         width: 90%;
         left: 36px;
+
+        .contact-dropdown {
+          width: 20rem;
+        }
       }
     }
   }
@@ -162,6 +171,8 @@ nav {
           left: 2rem;
 
           .contact-dropdown {
+            width: 100%;
+
             .dropdown {
               width: 50%;
             }
@@ -208,6 +219,11 @@ nav {
 
             .contact-dropdown {
               position: relative;
+              width: initial;
+
+              & > div {
+                margin-bottom: 0;
+              }
 
               .dropdown {
                 flex-direction: column;

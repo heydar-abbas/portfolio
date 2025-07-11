@@ -12,6 +12,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: auto;
 
     .title {
       margin-bottom: 1rem;
@@ -91,7 +92,6 @@
   .hero {
     flex-direction: row-reverse;
     margin-bottom: 0;
-    height: 56dvh;
 
     .page-title {
       flex-basis: 50em;
@@ -113,7 +113,6 @@
   .hero {
     display: flex;
     width: 100%;
-    height: 80dvh;
     flex-direction: row-reverse;
 
     .page-title {
@@ -130,7 +129,7 @@
 
       img {
         width: 100%;
-        height: 100%;
+        height: 28rem;
       }
     }
 
@@ -143,7 +142,11 @@
 
 @media (width >= 64rem) {
   .hero {
-    height: 100dvh;
+    .hero-img {
+      img {
+        height: 36rem;
+      }
+    }
   }
 }
 
