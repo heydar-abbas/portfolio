@@ -21,43 +21,9 @@
   }
 }
 
-.works-content {
-  padding: 1.25rem;
-
-  .work-card {
-    figure {
-      text-align: center;
-      color: $alt_color;
-
-      img {
-        width: 100%;
-        border-radius: 8px;
-      }
-
-      .caption {
-        padding: 1.25rem 0;
-        font-size: 1.25rem;
-        font-weight: bold;
-      }
-    }
-  }
-}
-
 @media (width >= 40rem) {
   .works-page-title {
     padding-top: 5rem;
-  }
-
-  .works-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
-
-    .work-card {
-      padding: 5px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px $shadow_color;
-    }
   }
 }
 
@@ -65,7 +31,7 @@
   .works-page-title {
     display: flex;
     justify-content: center;
-    padding: 2rem 1.25rem 0;
+    padding: 8rem 1.25rem 0;
     width: 100%;
   }
 }
@@ -73,6 +39,7 @@
 @media (width >= 64rem) {
   .works-page-title {
     display: block;
+    padding: 8rem 0 0;
 
     .title {
       text-align: initial;

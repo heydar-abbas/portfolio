@@ -2,32 +2,27 @@
 @use "./../helpers/mixins" as *;
 
 nav {
-  width: 100%;
+  padding: 20px;
 
   .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     color: $alt_color;
 
     .logo {
-      padding: 0 20px;
-      text-align: center;
+      flex: 1;
 
       a {
         font-family: $logo_font;
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: bold;
         text-decoration: none;
         color: inherit;
+        cursor: default;
       }
     }
 
     .toggle-menu {
-      padding: 20px;
-      line-height: 0px;
-      cursor: pointer;
-
       .icon {
         width: 36px;
         height: 36px;
@@ -35,10 +30,10 @@ nav {
     }
 
     .nav-list {
-      width: 90%;
+      width: 100%;
       position: absolute;
       top: 80px;
-      left: 18px;
+      left: 0;
       background-color: #ddd;
       padding: 20px;
       border-radius: 5px;
@@ -48,24 +43,18 @@ nav {
       transition-duration: 0.2s;
 
       ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-
         li {
           list-style: none;
-          width: 100%;
-          padding: 10px;
           text-align: center;
           color: $main_color;
           font-size: 1.2rem;
-          cursor: pointer;
 
           a {
+            padding: 10px;
             color: inherit;
             text-decoration: none;
             display: block;
+            cursor: default;
           }
         }
 
@@ -73,10 +62,11 @@ nav {
           display: flex;
           flex-direction: column;
           align-items: center;
+          margin-bottom: 20px;
 
           & > div {
             display: flex;
-            margin-bottom: 0.5rem;
+            padding: 10px;
           }
 
           .mdi--chevron-down {
@@ -110,10 +100,11 @@ nav {
         .social {
           display: flex;
           justify-content: center;
+          align-items: center;
+          gap: 20px;
 
           a {
             color: inherit;
-            margin: 0 20px;
 
             .fa6-brands--github,
             .fa6-brands--x-twitter {
@@ -139,11 +130,7 @@ nav {
   nav {
     .container {
       .nav-list {
-        width: 90%;
-        left: 36px;
-
         .contact-dropdown {
-          width: 20rem;
         }
       }
     }
@@ -154,28 +141,22 @@ nav {
   header {
     nav {
       .container {
-        width: 80%;
+        position: relative;
+        width: 90%;
         margin: 0 auto;
         border-radius: 20px;
-        backdrop-filter: blur(10px);
 
         .logo {
           a {
-            font-size: 4rem;
+            font-size: 2.5rem;
           }
         }
 
         .nav-list {
-          width: 93%;
-          top: 6rem;
-          left: 2rem;
+          top: 4rem;
 
           .contact-dropdown {
             width: 100%;
-
-            .dropdown {
-              width: 50%;
-            }
           }
         }
       }
@@ -188,7 +169,7 @@ nav {
     nav {
       .container {
         .logo {
-          text-align: initial;
+          flex: initial;
         }
 
         .toggle-menu {
@@ -196,21 +177,24 @@ nav {
         }
 
         .nav-list {
+          flex: 1;
           transform: rotateX(0);
           position: initial;
           background-color: transparent;
-          flex-basis: 30rem;
           padding: 0;
 
           ul {
-            flex-direction: row;
-            justify-content: space-around;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap: 1rem;
 
             li {
               color: inherit;
               padding: 0;
               transition-duration: $duration;
               width: initial;
+              cursor: default;
 
               &:not(:last-child):hover {
                 color: $blue_color;
@@ -220,6 +204,7 @@ nav {
             .contact-dropdown {
               position: relative;
               width: initial;
+              margin-bottom: 0;
 
               & > div {
                 margin-bottom: 0;
@@ -229,7 +214,7 @@ nav {
                 flex-direction: column;
                 position: absolute;
                 width: 16rem;
-                top: 36px;
+                top: 50px;
                 left: 50%;
                 transform: translateX(-50%) rotateX(90deg);
                 background-color: $alt_color;
@@ -274,9 +259,9 @@ nav {
 
             .social {
               border-top: 0;
+              gap: 0;
 
               a {
-                margin: 0 10px;
                 transition-duration: $duration;
 
                 &:hover {

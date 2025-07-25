@@ -2,5 +2,41 @@
 @use "./../helpers/variables" as *;
 @use "./../helpers/placeholders" as *;
 
+.works-content {
+  padding: 1.25rem;
+
+  .work-card {
+    figure {
+      text-align: center;
+      color: $alt_color;
+
+      img {
+        width: 100%;
+        border-radius: 8px;
+      }
+
+      .caption {
+        padding: 1.25rem 0;
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
 @media (width >= 40rem) {
+  .works-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+
+    .work-card {
+      padding: 5px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px $shadow_color;
+    }
+  }
+}
+
+@media (width >= 64rem) {
 }
